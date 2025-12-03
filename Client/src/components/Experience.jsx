@@ -433,7 +433,7 @@ const Experience = () => {
                     }}
                   >
                     <FaExternalLinkAlt size={13} />
-                    View Live Projects
+                    View Live Project
                   </a>
 
                   <button
