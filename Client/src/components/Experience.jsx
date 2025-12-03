@@ -433,7 +433,7 @@ const Experience = () => {
                     }}
                   >
                     <FaExternalLinkAlt size={13} />
-                    View Live
+                    View Live Projects
                   </a>
 
                   <button
@@ -464,7 +464,7 @@ const Experience = () => {
                     }}
                     onClick={() => setShowModal(true)}
                   >
-                    Full Details
+                    View Details
                   </button>
                 </div>
 
