@@ -30,31 +30,70 @@ const Contact = () => {
 
   // ------------------- ANIMATIONS -------------------
   useEffect(() => {
-    gsap.from(headingRef.current, {
-      y: -40,
-      rotationX: -20,
-      duration: 0.8,
-      ease: 'power3.out',
-      scrollTrigger: { trigger: sectionRef.current, start: 'top 75%' }
-    });
+    gsap.fromTo(headingRef.current,
+      {
+        y: -40,
+        rotationX: -20,
+        opacity: 0
+      },
+      {
+        y: 0,
+        rotationX: 0,
+        opacity: 1,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: { 
+          trigger: sectionRef.current, 
+          start: 'top 75%',
+          end: 'bottom 25%',
+          toggleActions: 'play reverse play reverse'
+        }
+      }
+    );
 
-    gsap.from(formRef.current, {
-      x: -60,
-      rotationY: -15,
-      duration: 0.8,
-      delay: 0.1,
-      ease: 'power3.out',
-      scrollTrigger: { trigger: formRef.current, start: 'top 80%' }
-    });
+    gsap.fromTo(formRef.current,
+      {
+        x: -60,
+        rotationY: -15,
+        opacity: 0
+      },
+      {
+        x: 0,
+        rotationY: 0,
+        opacity: 1,
+        duration: 0.9,
+        delay: 0.1,
+        ease: 'power3.out',
+        scrollTrigger: { 
+          trigger: formRef.current, 
+          start: 'top 80%',
+          end: 'bottom 20%',
+          toggleActions: 'play reverse play reverse'
+        }
+      }
+    );
 
-    gsap.from(socialRef.current, {
-      x: 60,
-      rotationY: 15,
-      duration: 0.8,
-      delay: 0.2,
-      ease: 'power3.out',
-      scrollTrigger: { trigger: socialRef.current, start: 'top 80%' }
-    });
+    gsap.fromTo(socialRef.current,
+      {
+        x: 60,
+        rotationY: 15,
+        opacity: 0
+      },
+      {
+        x: 0,
+        rotationY: 0,
+        opacity: 1,
+        duration: 0.9,
+        delay: 0.2,
+        ease: 'power3.out',
+        scrollTrigger: { 
+          trigger: socialRef.current, 
+          start: 'top 80%',
+          end: 'bottom 20%',
+          toggleActions: 'play reverse play reverse'
+        }
+      }
+    );
 
     infoCardsRef.current.forEach((card, index) => {
       if (!card) return;
@@ -74,7 +113,7 @@ const Contact = () => {
           duration: 0.75,
           ease: 'back.out(1.6)',
           delay: 0.2 + index * 0.08,
-          scrollTrigger: { trigger: card, start: 'top 85%', once: true }
+          scrollTrigger: { trigger: card, start: 'top 85%', end: 'bottom 15%', toggleActions: 'play reverse play reverse' }
         }
       );
     });

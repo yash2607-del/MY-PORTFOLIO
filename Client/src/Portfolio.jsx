@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Experience from "./components/Experience";
@@ -8,11 +10,21 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Portfolio() {
 	console.log('Portfolio rendering...');
 
-	useEffect(() => {
-		// On reload or initial mount, always show the Hero section
+  useEffect(() => {
+    // Optimize ScrollTrigger for smoother performance
+    ScrollTrigger.config({
+      limitCallbacks: true,
+      syncInterval: 50,
+      autoRefreshEvents: 'visibilitychange,DOMContentLoaded,load'
+    });
+
+    // Disable GSAP's default ticker for better performance
+    gsap.ticker.lagSmoothing(0);		// On reload or initial mount, always show the Hero section
 		// Remove any hash to prevent browser auto-scrolling to other sections
 		try {
 			if (window.location.hash) {

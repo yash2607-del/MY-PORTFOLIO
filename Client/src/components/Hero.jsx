@@ -2,14 +2,17 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
-import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { FaLinkedin, FaGithub, FaDiscord } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const socialLinks = [
   { icon: <FaLinkedin />, url: 'https://www.linkedin.com/in/yashh26/' },
   { icon: <FaGithub />, url: 'https://github.com/yash2607-del' },
   { icon: <SiLeetcode />, url: 'https://leetcode.com/u/Yashh26/' },
-  { icon: <FaInstagram />, url: 'https://www.instagram.com/yashh._.2607/' },
+  { icon: <FaDiscord />, url: 'https://discord.com/users/yash_2602' },
 ];
 
 
@@ -71,26 +74,115 @@ const Hero = () => {
 
     tickId = setTimeout(tick, typeSpeed);
 
-    // GSAP animations (use context to avoid double in StrictMode)
+    // GSAP animations with ScrollTrigger
     const ctx = gsap.context(() => {
-      if (titleRef.current) gsap.fromTo(titleRef.current, { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, delay: 0.2, ease: 'power3.out' });
-      if (nameRef.current) gsap.fromTo(nameRef.current, { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, delay: 0.4, ease: 'power3.out' });
-      if (typedBoxRef.current) gsap.fromTo(typedBoxRef.current, { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, delay: 0.6, ease: 'power3.out' });
-      if (iconsRef.current && iconsRef.current.length)
-        gsap.fromTo(iconsRef.current, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.7, delay: 0.8, stagger: 0.1, ease: 'back.out(1.7)' });
-      if (buttonRef.current) gsap.fromTo(buttonRef.current, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, delay: 1.2, ease: 'power3.out' });
+      if (titleRef.current) {
+        gsap.fromTo(titleRef.current, 
+          { y: 60, opacity: 0, scale: 0.9 }, 
+          { 
+            y: 0, opacity: 1, scale: 1, 
+            duration: 1.2, 
+            ease: 'back.out(1.4)',
+            scrollTrigger: {
+              trigger: heroRef.current,
+              start: 'top 80%',
+              end: 'bottom 20%',
+              toggleActions: 'play reverse play reverse',
+              fastScrollEnd: true
+            }
+          }
+        );
+      }
+      
+      if (nameRef.current) {
+        gsap.fromTo(nameRef.current, 
+          { y: 60, opacity: 0, scale: 0.9 }, 
+          { 
+            y: 0, opacity: 1, scale: 1, 
+            duration: 1.2, 
+            delay: 0.2,
+            ease: 'back.out(1.4)',
+            scrollTrigger: {
+              trigger: heroRef.current,
+              start: 'top 80%',
+              end: 'bottom 20%',
+              toggleActions: 'play reverse play reverse',
+              fastScrollEnd: true
+            }
+          }
+        );
+      }
+      
+      if (typedBoxRef.current) {
+        gsap.fromTo(typedBoxRef.current, 
+          { y: 50, opacity: 0, rotationX: -20 }, 
+          { 
+            y: 0, opacity: 1, rotationX: 0, 
+            duration: 1, 
+            delay: 0.4,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: heroRef.current,
+              start: 'top 80%',
+              end: 'bottom 20%',
+              toggleActions: 'play reverse play reverse',
+              fastScrollEnd: true
+            }
+          }
+        );
+      }
+      
+      if (iconsRef.current && iconsRef.current.length) {
+        gsap.fromTo(iconsRef.current, 
+          { scale: 0, opacity: 0, rotation: -180 }, 
+          { 
+            scale: 1, opacity: 1, rotation: 0, 
+            duration: 0.8, 
+            delay: 0.6,
+            stagger: 0.12, 
+            ease: 'back.out(2)',
+            scrollTrigger: {
+              trigger: heroRef.current,
+              start: 'top 80%',
+              end: 'bottom 20%',
+              toggleActions: 'play reverse play reverse',
+              fastScrollEnd: true
+            }
+          }
+        );
+      }
+      
+      if (buttonRef.current) {
+        gsap.fromTo(buttonRef.current, 
+          { y: 40, opacity: 0, scale: 0.8 }, 
+          { 
+            y: 0, opacity: 1, scale: 1, 
+            duration: 0.9, 
+            delay: 0.9,
+            ease: 'back.out(1.7)',
+            scrollTrigger: {
+              trigger: heroRef.current,
+              start: 'top 80%',
+              end: 'bottom 20%',
+              toggleActions: 'play reverse play reverse',
+              fastScrollEnd: true
+            }
+          }
+        );
+      }
 
-      // Floating balls animation
-      ballRefs.current.forEach((ball) => {
+      // Floating balls animation - optimized
+      ballRefs.current.forEach((ball, index) => {
         if (!ball) return;
         const animateBall = () => {
-          const x = gsap.utils.random(-80, 80);
-          const y = gsap.utils.random(-60, 60);
+          const x = gsap.utils.random(-60, 60);
+          const y = gsap.utils.random(-40, 40);
           gsap.to(ball, {
             x,
             y,
-            duration: gsap.utils.random(6, 12),
+            duration: gsap.utils.random(8, 14),
             ease: 'sine.inOut',
+            delay: index * 0.1,
             onComplete: animateBall,
           });
         };
@@ -106,38 +198,89 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="hero" className="d-flex align-items-center position-relative overflow-hidden" ref={heroRef} style={{minHeight: '100vh', background: 'linear-gradient(135deg, #ffe4cc 0%, #ffd4a3 100%)'}}>
+    <section id="hero" className="d-flex align-items-center position-relative" ref={heroRef} style={{minHeight: '100vh', background: 'linear-gradient(135deg, #ffe4cc 0%, #ffd4a3 100%)', overflow: 'hidden'}}>
       <style>{`
         @keyframes blink { 50% { opacity: 0; } }
         .type-cursor { display: inline-block; animation: blink 1s step-end infinite; }
       `}</style>
-      {/* Animated balls */}
+      {/* Enhanced Animated Background Elements */}
       <div style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: 0}}>
-        {[...Array(8)].map((_, i) => {
-          // Distribute balls evenly in a circle (not too close)
-          const angle = (i / 8) * 2 * Math.PI;
-          const radius = 36; // percent, controls how far from center
+        {/* Floating Circles */}
+        {[...Array(12)].map((_, i) => {
+          const angle = (i / 12) * 2 * Math.PI;
+          const radius = 38;
           const left = 50 + Math.cos(angle) * radius;
-          const top = 50 + Math.sin(angle) * radius * 0.7; // ellipse for more vertical space
+          const top = 50 + Math.sin(angle) * radius * 0.65;
+          const size = 35 + (i % 5) * 12;
+          const isSpecial = i % 3 === 0;
           return (
             <div
-              key={i}
+              key={`circle-${i}`}
               ref={el => ballRefs.current[i] = el}
               style={{
                 position: 'absolute',
-                width: 38 + (i % 4) * 14,
-                height: 38 + (i % 4) * 14,
-                borderRadius: '50%',
-                background: i % 2 === 0 ? 'rgba(255,152,0,0.2)' : 'rgba(255,179,0,0.35)',
+                width: size,
+                height: size,
+                borderRadius: isSpecial ? '30%' : '50%',
+                background: i % 2 === 0 
+                  ? 'linear-gradient(135deg, rgba(255,152,0,0.25), rgba(255,179,0,0.15))'
+                  : 'rgba(255,179,0,0.3)',
                 left: `${left}%`,
                 top: `${top}%`,
                 filter: 'blur(2px)',
+                boxShadow: '0 4px 15px rgba(255,152,0,0.1)',
                 zIndex: 1,
               }}
             />
           );
         })}
+        
+        {/* Decorative Rings */}
+        {[...Array(4)].map((_, i) => (
+          <div
+            key={`ring-${i}`}
+            style={{
+              position: 'absolute',
+              width: 100 + i * 40,
+              height: 100 + i * 40,
+              borderRadius: '50%',
+              border: '2px solid rgba(255,152,0,0.12)',
+              left: `${15 + i * 20}%`,
+              top: `${10 + i * 15}%`,
+              animation: `rotate ${20 + i * 5}s linear infinite`,
+              zIndex: 0
+            }}
+          />
+        ))}
+        
+        {/* Gradient Blobs */}
+        <div style={{
+          position: 'absolute',
+          width: 300,
+          height: 300,
+          borderRadius: '40%',
+          background: 'radial-gradient(circle, rgba(255,152,0,0.15), transparent 70%)',
+          top: '10%',
+          right: '5%',
+          filter: 'blur(30px)'
+        }} />
+        <div style={{
+          position: 'absolute',
+          width: 250,
+          height: 250,
+          borderRadius: '45%',
+          background: 'radial-gradient(circle, rgba(255,179,0,0.2), transparent 70%)',
+          bottom: '15%',
+          left: '8%',
+          filter: 'blur(25px)'
+        }} />
       </div>
+      <style>{`
+        @keyframes rotate {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+      `}</style>
       <div className="container position-relative" style={{zIndex: 2, maxWidth: 1200}}>
         <div className="row align-items-center">
           <div className="col-lg-8 offset-lg-2 text-center">

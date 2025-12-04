@@ -57,9 +57,15 @@ const Skills = () => {
       {
         y: 0,
         opacity: 1,
-        duration: 0.7,
+        duration: 0.9,
         ease: 'power3.out',
-        scrollTrigger: { trigger: sectionRef.current, start: 'top 80%' },
+        scrollTrigger: { 
+          trigger: sectionRef.current, 
+          start: 'top 80%',
+          end: 'bottom 20%',
+          toggleActions: 'play reverse play reverse',
+          fastScrollEnd: true
+        },
       }
     );
 
@@ -68,14 +74,20 @@ const Skills = () => {
       const chips = row.querySelectorAll('.skill-chip');
       gsap.fromTo(
         chips,
-        { y: 20, opacity: 0 },
+        { y: 25, opacity: 0, scale: 0.9 },
         {
           y: 0,
           opacity: 1,
-          stagger: 0.06,
-          duration: 0.5,
-          ease: 'power2.out',
-          scrollTrigger: { trigger: row, start: 'top 85%' },
+          scale: 1,
+          stagger: 0.05,
+          duration: 0.6,
+          ease: 'back.out(1.5)',
+          scrollTrigger: { 
+            trigger: row, 
+            start: 'top 85%',
+            end: 'bottom 15%',
+            toggleActions: 'play reverse play reverse'
+          },
         }
       );
     });
@@ -109,7 +121,7 @@ const Skills = () => {
         overflow: 'hidden'
       }}
     >
-      {/* Floating Shapes */}
+      {/* Enhanced Floating Shapes */}
       <div style={{
         position: 'absolute',
         top: 0,
@@ -117,24 +129,68 @@ const Skills = () => {
         width: '100%',
         height: '100%',
         pointerEvents: 'none',
-        zIndex: 0
+        zIndex: 0,
+        overflow: 'hidden'
       }}>
-        {[...Array(5)].map((_, i) => (
+        {/* Main shapes */}
+        {[...Array(9)].map((_, i) => (
           <div
-            key={i}
+            key={`shape-${i}`}
             ref={el => (floatingShapesRef.current[i] = el)}
             style={{
               position: 'absolute',
-              width: i % 2 === 0 ? 65 : 85,
-              height: i % 2 === 0 ? 65 : 85,
-              borderRadius: '50%',
-              background: i % 2 === 0 ? 'rgba(255,152,0,0.16)' : 'rgba(255,179,0,0.26)',
-              left: `${12 + i * 18}%`,
-              top: `${25 + (i % 3) * 20}%`,
+              width: 70 + (i % 4) * 18,
+              height: 70 + (i % 4) * 18,
+              borderRadius: i % 3 === 0 ? '50%' : '38%',
+              background: i % 2 === 0 
+                ? 'linear-gradient(135deg, rgba(255,152,0,0.24), rgba(255,179,0,0.16))'
+                : 'rgba(255,179,0,0.3)',
+              left: `${12 + i * 11}%`,
+              top: `${14 + (i % 4) * 21}%`,
               filter: 'blur(2px)',
+              boxShadow: '0 4px 16px rgba(255,152,0,0.09)'
             }}
           />
         ))}
+        
+        {/* Decorative elements */}
+        {[...Array(12)].map((_, i) => (
+          <div
+            key={`accent-${i}`}
+            style={{
+              position: 'absolute',
+              width: 10 + (i % 3) * 5,
+              height: 10 + (i % 3) * 5,
+              borderRadius: '50%',
+              background: 'rgba(255,152,0,0.32)',
+              left: `${6 + i * 8}%`,
+              top: `${12 + (i % 5) * 17}%`,
+              filter: 'blur(1px)'
+            }}
+          />
+        ))}
+        
+        {/* Soft glows */}
+        <div style={{
+          position: 'absolute',
+          width: 310,
+          height: 310,
+          borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(255,152,0,0.13), transparent 68%)',
+          top: '8%',
+          right: '3%',
+          filter: 'blur(42px)'
+        }} />
+        <div style={{
+          position: 'absolute',
+          width: 275,
+          height: 275,
+          borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(255,179,0,0.17), transparent 68%)',
+          bottom: '10%',
+          left: '5%',
+          filter: 'blur(36px)'
+        }} />
       </div>
       <div className="container" style={{ maxWidth: 1100 }}>
         <div ref={headingRef} className="text-center mb-5">

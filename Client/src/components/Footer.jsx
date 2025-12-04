@@ -27,13 +27,9 @@ const Footer = () => {
       });
     }
 
-    // Footer fade in (no ScrollTrigger to avoid plugin timing issues)
+    // Footer - no animation for better performance
     if (footerRef.current) {
-      gsap.fromTo(
-        footerRef.current,
-        { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }
-      );
+      gsap.set(footerRef.current, { opacity: 1, y: 0 });
     }
 
     // Animate floating shapes

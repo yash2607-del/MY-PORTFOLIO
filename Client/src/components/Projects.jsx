@@ -83,11 +83,14 @@ const Projects = () => {
       {
         y: 0,
         opacity: 1,
-        duration: 0.8,
+        duration: 1,
         ease: 'power3.out',
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top 80%',
+          end: 'bottom 20%',
+          toggleActions: 'play reverse play reverse',
+          fastScrollEnd: true
         },
       }
     );
@@ -96,16 +99,19 @@ const Projects = () => {
       if (!card) return;
       gsap.fromTo(
         card,
-        { y: 80, opacity: 0 },
+        { y: 80, opacity: 0, scale: 0.95 },
         {
           y: 0,
           opacity: 1,
-          duration: 0.7,
-          delay: index * 0.15,
-          ease: 'power3.out',
+          scale: 1,
+          duration: 0.9,
+          delay: index * 0.1,
+          ease: 'back.out(1.2)',
           scrollTrigger: {
             trigger: card,
             start: 'top 85%',
+            end: 'bottom 15%',
+            toggleActions: 'play reverse play reverse'
           },
         }
       );
@@ -141,7 +147,7 @@ const Projects = () => {
         overflow: 'hidden'
       }}
     >
-      {/* Floating Shapes */}
+      {/* Enhanced Floating Shapes */}
       <div style={{
         position: 'absolute',
         top: 0,
@@ -149,24 +155,67 @@ const Projects = () => {
         width: '100%',
         height: '100%',
         pointerEvents: 'none',
-        zIndex: 0
+        zIndex: 0,
+        overflow: 'hidden'
       }}>
-        {[...Array(7)].map((_, i) => (
+        {/* Animated shapes */}
+        {[...Array(10)].map((_, i) => (
           <div
-            key={i}
+            key={`shape-${i}`}
             ref={el => (floatingShapesRef.current[i] = el)}
             style={{
               position: 'absolute',
-              width: i % 2 === 0 ? 60 : 80,
-              height: i % 2 === 0 ? 60 : 80,
-              borderRadius: '50%',
-              background: i % 2 === 0 ? 'rgba(255,152,0,0.18)' : 'rgba(255,179,0,0.28)',
-              left: `${10 + i * 13}%`,
-              top: `${15 + (i % 4) * 22}%`,
+              width: 65 + (i % 4) * 20,
+              height: 65 + (i % 4) * 20,
+              borderRadius: i % 3 === 0 ? '50%' : '40%',
+              background: i % 2 === 0 
+                ? 'linear-gradient(135deg, rgba(255,152,0,0.22), rgba(255,179,0,0.14))'
+                : 'rgba(255,179,0,0.28)',
+              left: `${10 + i * 10}%`,
+              top: `${12 + (i % 4) * 22}%`,
               filter: 'blur(2px)',
+              boxShadow: '0 5px 18px rgba(255,152,0,0.1)'
             }}
           />
         ))}
+        
+        {/* Small accent dots */}
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={`dot-${i}`}
+            style={{
+              position: 'absolute',
+              width: 6 + (i % 2) * 3,
+              height: 6 + (i % 2) * 3,
+              borderRadius: '50%',
+              background: 'rgba(255,152,0,0.35)',
+              left: `${3 + i * 5}%`,
+              top: `${8 + (i % 6) * 15}%`
+            }}
+          />
+        ))}
+        
+        {/* Soft gradient glows */}
+        <div style={{
+          position: 'absolute',
+          width: 320,
+          height: 320,
+          borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(255,152,0,0.14), transparent 70%)',
+          top: '5%',
+          right: '0%',
+          filter: 'blur(45px)'
+        }} />
+        <div style={{
+          position: 'absolute',
+          width: 290,
+          height: 290,
+          borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(255,179,0,0.18), transparent 70%)',
+          bottom: '8%',
+          left: '2%',
+          filter: 'blur(38px)'
+        }} />
       </div>
       <div className="container" style={{ maxWidth: 1200 }}>
         {/* Section Header */}

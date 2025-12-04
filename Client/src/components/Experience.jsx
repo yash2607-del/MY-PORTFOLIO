@@ -70,15 +70,25 @@ const Experience = () => {
     if (!sectionRef.current) return;
 
     if (headingRef.current) {
-      gsap.from(headingRef.current, {
-        y: -30,
-        duration: 0.8,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 85%',
+      gsap.fromTo(headingRef.current,
+        {
+          y: -30,
+          opacity: 0
         },
-      });
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 85%',
+            end: 'bottom 15%',
+            toggleActions: 'play reverse play reverse',
+            fastScrollEnd: true
+          },
+        }
+      );
     }
 
     if (cardRef.current) {
@@ -101,7 +111,8 @@ const Experience = () => {
           scrollTrigger: {
             trigger: cardEl,
             start: 'top 85%',
-            once: true
+            end: 'bottom 15%',
+            toggleActions: 'play reverse play reverse'
           },
         }
       );
@@ -127,7 +138,8 @@ const Experience = () => {
           scrollTrigger: {
             trigger: dscCardEl,
             start: 'top 85%',
-            once: true
+            end: 'bottom 15%',
+            toggleActions: 'play reverse play reverse'
           },
         }
       );
@@ -193,24 +205,68 @@ const Experience = () => {
         width: '100%',
         height: '100%',
         pointerEvents: 'none',
-        zIndex: 0
+        zIndex: 0,
+        overflow: 'hidden'
       }}>
-        {[...Array(6)].map((_, i) => (
+        {/* Main floating shapes */}
+        {[...Array(8)].map((_, i) => (
           <div
-            key={i}
+            key={`shape-${i}`}
             ref={el => (floatingShapesRef.current[i] = el)}
             style={{
               position: 'absolute',
-              width: i % 2 === 0 ? 70 : 90,
-              height: i % 2 === 0 ? 70 : 90,
-              borderRadius: '50%',
-              background: i % 2 === 0 ? 'rgba(255,152,0,0.15)' : 'rgba(255,179,0,0.25)',
-              left: `${15 + i * 15}%`,
-              top: `${20 + (i % 3) * 25}%`,
+              width: 60 + (i % 3) * 25,
+              height: 60 + (i % 3) * 25,
+              borderRadius: i % 3 === 0 ? '50%' : '35%',
+              background: i % 2 === 0 
+                ? 'linear-gradient(135deg, rgba(255,152,0,0.2), rgba(255,179,0,0.12))'
+                : 'rgba(255,179,0,0.25)',
+              left: `${8 + i * 12}%`,
+              top: `${15 + (i % 4) * 20}%`,
               filter: 'blur(2px)',
+              boxShadow: '0 4px 20px rgba(255,152,0,0.08)'
             }}
           />
         ))}
+        
+        {/* Decorative dots */}
+        {[...Array(15)].map((_, i) => (
+          <div
+            key={`dot-${i}`}
+            style={{
+              position: 'absolute',
+              width: 8 + (i % 3) * 4,
+              height: 8 + (i % 3) * 4,
+              borderRadius: '50%',
+              background: 'rgba(255,152,0,0.3)',
+              left: `${5 + i * 6}%`,
+              top: `${10 + (i % 5) * 18}%`,
+              filter: 'blur(1px)'
+            }}
+          />
+        ))}
+        
+        {/* Gradient overlays */}
+        <div style={{
+          position: 'absolute',
+          width: 350,
+          height: 350,
+          borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(255,152,0,0.12), transparent 65%)',
+          top: '-10%',
+          right: '-5%',
+          filter: 'blur(40px)'
+        }} />
+        <div style={{
+          position: 'absolute',
+          width: 280,
+          height: 280,
+          borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(255,179,0,0.15), transparent 65%)',
+          bottom: '-8%',
+          left: '-3%',
+          filter: 'blur(35px)'
+        }} />
       </div>
       <div className="container" style={{ maxWidth: 1000 }}>
         {/* Heading */}

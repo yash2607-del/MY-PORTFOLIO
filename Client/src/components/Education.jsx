@@ -52,7 +52,8 @@ const Education = () => {
             scrollTrigger: {
               trigger: card,
               start: 'top 85%',
-              once: true
+              end: 'bottom 15%',
+              toggleActions: 'play reverse play reverse'
             }
           }
         );

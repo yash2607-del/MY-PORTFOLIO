@@ -60,12 +60,12 @@ const Navbar = () => {
     const element = document.getElementById(sectionId);
     if (element) {
       gsap.to(window, {
-        duration: 1,
+        duration: 1.4,
         scrollTo: {
           y: element,
           offsetY: 80
         },
-        ease: "power2.out"
+        ease: "power3.inOut"
       });
     }
   };
@@ -111,10 +111,10 @@ const Navbar = () => {
         minHeight: 70,
         zIndex: 1030,
         background: 'rgba(255, 255, 255, 0.95)',
-        backdropFilter: 'blur(10px)',
+        backdropFilter: 'blur(12px)',
         boxShadow: '0 2px 20px rgba(255, 152, 0, 0.08)',
         borderBottom: '1px solid rgba(255, 179, 0, 0.1)',
-        transition: 'top 0.3s ease-in-out',
+        transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
       }}
     >
       <div className="container-fluid px-4" style={{ maxWidth: 1400 }}>
