@@ -115,7 +115,7 @@ const Skills = () => {
       id="skills"
       ref={sectionRef}
       style={{
-        background: 'linear-gradient(135deg, #ffe4cc 0%, #ffd4a3 100%)',
+        background: 'linear-gradient(135deg, #f0f7ed 0%, #dfe8db 100%)',
         padding: '80px 0',
         position: 'relative',
         overflow: 'hidden'
@@ -143,12 +143,12 @@ const Skills = () => {
               height: 70 + (i % 4) * 18,
               borderRadius: i % 3 === 0 ? '50%' : '38%',
               background: i % 2 === 0 
-                ? 'linear-gradient(135deg, rgba(255,152,0,0.24), rgba(255,179,0,0.16))'
-                : 'rgba(255,179,0,0.3)',
+                ? 'linear-gradient(135deg, rgba(151, 169, 147, 0.24), rgba(167, 182, 163, 0.16))'
+                : 'rgba(167, 182, 163, 0.3)',
               left: `${12 + i * 11}%`,
               top: `${14 + (i % 4) * 21}%`,
               filter: 'blur(2px)',
-              boxShadow: '0 4px 16px rgba(255,152,0,0.09)'
+              boxShadow: '0 4px 16px rgba(151,169,147,0.09)'
             }}
           />
         ))}
@@ -162,7 +162,7 @@ const Skills = () => {
               width: 10 + (i % 3) * 5,
               height: 10 + (i % 3) * 5,
               borderRadius: '50%',
-              background: 'rgba(255,152,0,0.32)',
+              background: 'rgba(151, 169, 147, 0.32)',
               left: `${6 + i * 8}%`,
               top: `${12 + (i % 5) * 17}%`,
               filter: 'blur(1px)'
@@ -176,7 +176,7 @@ const Skills = () => {
           width: 310,
           height: 310,
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(255,152,0,0.13), transparent 68%)',
+          background: 'radial-gradient(circle, rgba(151, 169, 147, 0.13), transparent 68%)',
           top: '8%',
           right: '3%',
           filter: 'blur(42px)'
@@ -186,7 +186,7 @@ const Skills = () => {
           width: 275,
           height: 275,
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(255,179,0,0.17), transparent 68%)',
+          background: 'radial-gradient(circle, rgba(167, 182, 163, 0.17), transparent 68%)',
           bottom: '10%',
           left: '5%',
           filter: 'blur(36px)'
@@ -217,7 +217,7 @@ const Skills = () => {
             style={{
               width: 80,
               height: 4,
-              background: 'linear-gradient(90deg, #ff9800 0%, #ffb300 100%)',
+              background: 'linear-gradient(90deg, #5d8c5a 0%, #78a375 100%)',
               margin: '0 auto',
               borderRadius: 4
             }}
@@ -231,14 +231,14 @@ const Skills = () => {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: 10,
-                background: 'linear-gradient(135deg, #ff9800, #ffb300)',
+                background: 'linear-gradient(135deg, #5d8c5a, #78a375)',
                 color: '#fff',
                 fontWeight: 700,
                 fontSize: 18,
                 letterSpacing: 0.5,
                 padding: '12px 24px',
                 borderRadius: 16,
-                boxShadow: '0 4px 15px rgba(255,152,0,0.3)',
+                boxShadow: '0 4px 15px rgba(151,169,147,0.3)',
                 fontFamily: 'Poppins, Inter, Arial, sans-serif'
               }}>
                 <div style={{
@@ -265,7 +265,7 @@ const Skills = () => {
                       fontWeight: 600,
                       fontSize: 15,
                       boxShadow: '0 6px 18px rgba(0,0,0,0.08)',
-                      border: '2px solid rgba(255,152,0,0.2)',
+                      border: '2px solid rgba(151,169,147,0.2)',
                       transform: 'translateZ(0)',
                       transition: 'all 0.3s ease',
                       fontFamily: 'Inter, Arial, sans-serif'
@@ -274,8 +274,8 @@ const Skills = () => {
                       gsap.to(e.currentTarget, { 
                         y: -4, 
                         scale: 1.05,
-                        boxShadow: '0 10px 25px rgba(255,152,0,0.25)',
-                        borderColor: '#ff9800',
+                        boxShadow: '0 10px 25px rgba(151,169,147,0.25)',
+                        borderColor: '#5d8c5a',
                         duration: 0.2 
                       });
                     }}
@@ -284,12 +284,12 @@ const Skills = () => {
                         y: 0, 
                         scale: 1,
                         boxShadow: '0 6px 18px rgba(0,0,0,0.08)',
-                        borderColor: 'rgba(255,152,0,0.2)',
+                        borderColor: 'rgba(151,169,147,0.2)',
                         duration: 0.2 
                       });
                     }}
                   >
-                    <Icon size={20} style={{ marginRight: 10, color: '#ff9800' }} /> {it.name}
+                    <Icon size={20} style={{ marginRight: 10, color: '#5d8c5a' }} /> {it.name}
                   </span>
                 );
               })}

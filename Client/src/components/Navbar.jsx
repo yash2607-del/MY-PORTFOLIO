@@ -15,7 +15,7 @@ const navFont = {
   position: 'relative'
 };
 const navActiveBtn = {
-  background: "linear-gradient(135deg, #ff9800 0%, #ffb300 100%)",
+  background: "linear-gradient(135deg, #4a7c47 0%, #6b9968 100%)",
   color: "#fff",
   fontWeight: 600,
   borderRadius: 20,
@@ -24,7 +24,7 @@ const navActiveBtn = {
   fontSize: 16,
   padding: "8px 20px",
   transition: "all 0.3s ease",
-  boxShadow: "0 4px 12px rgba(255, 152, 0, 0.25)",
+  boxShadow: "0 4px 15px rgba(122, 155, 118, 0.4)",
   transform: 'translateY(-2px)'
 };
 
@@ -32,7 +32,7 @@ const nameFont = {
   fontFamily: "Montserrat, Poppins, Inter, Segoe UI, Arial, sans-serif",
   fontWeight: 800,
   fontSize: 28,
-  background: 'linear-gradient(135deg, #ff9800 0%, #ffb300 100%)',
+  background: 'linear-gradient(135deg, #4a7c47 0%, #6b9968 100%)',
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
   backgroundClip: 'text',
@@ -134,7 +134,7 @@ const Navbar = () => {
             transition: 'all 0.3s ease'
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.color = '#ff9800';
+            e.currentTarget.style.color = '#5d8c5a';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.color = '#000';

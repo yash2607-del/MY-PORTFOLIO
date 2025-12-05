@@ -66,13 +66,13 @@ const Footer = () => {
     <footer
       ref={footerRef}
       style={{
-        background: 'linear-gradient(135deg, #ffe4cc 0%, #ffd4a3 100%)',
+        background: 'linear-gradient(135deg, #f0f7ed 0%, #dfe8db 100%)',
         color: '#333',
         padding: '60px 0 0',
         position: 'relative',
         overflow: 'hidden',
         minHeight: 320,
-        borderTop: '1px solid #ffd699'
+        borderTop: '1px solid #c8d9c4'
       }}
     >
       {/* Floating Shapes */}
@@ -94,7 +94,7 @@ const Footer = () => {
               width: i % 2 === 0 ? 65 : 85,
               height: i % 2 === 0 ? 65 : 85,
               borderRadius: '50%',
-              background: i % 2 === 0 ? 'rgba(255,152,0,0.16)' : 'rgba(255,179,0,0.26)',
+              background: i % 2 === 0 ? 'rgba(151,169,147,0.16)' : 'rgba(167,182,163,0.26)',
               left: `${12 + i * 18}%`,
               top: `${25 + (i % 3) * 20}%`,
               filter: 'blur(2px)'
@@ -111,13 +111,10 @@ const Footer = () => {
             <div
               style={{
                 fontSize: 32,
-                fontWeight: 800,
+                fontWeight: 900,
                 fontFamily: 'Poppins, Inter, Arial, sans-serif',
                 letterSpacing: 2,
-                background: 'linear-gradient(135deg, #ff9800 0%, #ffb300 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
+                color: '#4a7c47',
                 marginBottom: 16
               }}
             >
@@ -151,24 +148,24 @@ const Footer = () => {
                     width: 44,
                     height: 44,
                     borderRadius: '50%',
-                    background: 'rgba(255,152,0,0.1)',
-                    border: '1px solid rgba(255,152,0,0.3)',
+                    background: 'rgba(151,169,147,0.1)',
+                    border: '1px solid rgba(151,169,147,0.3)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: '#ff9800',
+                    color: '#5d8c5a',
                     transition: 'all 0.3s ease',
                     textDecoration: 'none'
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.background = 'linear-gradient(135deg, #ff9800, #ffb300)';
+                    e.currentTarget.style.background = 'linear-gradient(135deg, #5d8c5a, #78a375)';
                     e.currentTarget.style.color = '#fff';
                     e.currentTarget.style.transform = 'translateY(-3px)';
-                    e.currentTarget.style.boxShadow = '0 8px 20px rgba(255,152,0,0.3)';
+                    e.currentTarget.style.boxShadow = '0 8px 20px rgba(151,169,147,0.3)';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.background = 'rgba(255,152,0,0.1)';
-                    e.currentTarget.style.color = '#ff9800';
+                    e.currentTarget.style.background = 'rgba(151,169,147,0.1)';
+                    e.currentTarget.style.color = '#5d8c5a';
                     e.currentTarget.style.transform = 'translateY(0)';
                     e.currentTarget.style.boxShadow = 'none';
                   }}
@@ -214,7 +211,7 @@ const Footer = () => {
                     gap: 8
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.color = '#ff9800';
+                    e.currentTarget.style.color = '#5d8c5a';
                     e.currentTarget.style.paddingLeft = '8px';
                   }}
                   onMouseLeave={(e) => {
@@ -249,7 +246,7 @@ const Footer = () => {
                 lineHeight: 1.6,
                 fontWeight: 500
               }}>
-                <strong style={{ color: '#ff9800', fontWeight: 700 }}>Email:</strong><br />
+                <strong style={{ color: '#5d8c5a', fontWeight: 700 }}>Email:</strong><br />
                 yashr1624@gmail.com
               </div>
               <div style={{
@@ -259,7 +256,7 @@ const Footer = () => {
                 lineHeight: 1.6,
                 fontWeight: 500
               }}>
-                <strong style={{ color: '#ff9800', fontWeight: 700 }}>Phone:</strong><br />
+                <strong style={{ color: '#5d8c5a', fontWeight: 700 }}>Phone:</strong><br />
                 +91 9013905981
               </div>
               <div style={{
@@ -269,7 +266,7 @@ const Footer = () => {
                 lineHeight: 1.6,
                 fontWeight: 500
               }}>
-                <strong style={{ color: '#ff9800', fontWeight: 700 }}>Location:</strong><br />
+                <strong style={{ color: '#5d8c5a', fontWeight: 700 }}>Location:</strong><br />
                 India
               </div>
             </div>
@@ -281,7 +278,7 @@ const Footer = () => {
           style={{
             width: '100%',
             height: 1,
-            background: 'linear-gradient(90deg, transparent 0%, rgba(255,152,0,0.5) 50%, transparent 100%)',
+            background: 'linear-gradient(90deg, transparent 0%, rgba(151,169,147,0.5) 50%, transparent 100%)',
             marginBottom: 24
           }}
         />
@@ -308,8 +305,8 @@ const Footer = () => {
             <span>&copy; {new Date().getFullYear()} Yash Raj. All rights reserved.</span>
             <span style={{ color: '#999' }}>•</span>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
-              Made with <FaHeart ref={heartRef} size={14} style={{ color: '#ff9800' }} /> and{' '}
-              <FaCode size={14} style={{ color: '#ff9800' }} />
+              Made with <FaHeart ref={heartRef} size={14} style={{ color: '#5d8c5a' }} /> and{' '}
+              <FaCode size={14} style={{ color: '#5d8c5a' }} />
             </span>
           </p>
         </div>
@@ -326,10 +323,10 @@ const Footer = () => {
           width: 56,
           height: 56,
           borderRadius: '50%',
-          background: 'linear-gradient(135deg, #ff9800, #ffb300)',
+          background: 'linear-gradient(135deg, #5d8c5a, #78a375)',
           color: '#fff',
           border: '2px solid rgba(255,255,255,0.2)',
-          boxShadow: '0 8px 24px rgba(255,152,0,0.4)',
+          boxShadow: '0 8px 24px rgba(151,169,147,0.4)',
           cursor: 'pointer',
           display: 'flex',
           alignItems: 'center',
@@ -345,7 +342,7 @@ const Footer = () => {
           gsap.to(e.currentTarget, { 
             y: -6, 
             scale: 1.1,
-            boxShadow: '0 12px 32px rgba(255,152,0,0.6)', 
+            boxShadow: '0 12px 32px rgba(151,169,147,0.6)', 
             duration: 0.3,
             ease: 'back.out(1.7)'
           });
@@ -354,7 +351,7 @@ const Footer = () => {
           gsap.to(e.currentTarget, { 
             y: 0, 
             scale: 1,
-            boxShadow: '0 8px 24px rgba(255,152,0,0.4)', 
+            boxShadow: '0 8px 24px rgba(151,169,147,0.4)', 
             duration: 0.3 
           });
         }}

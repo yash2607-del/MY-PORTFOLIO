@@ -89,7 +89,7 @@ const Education = () => {
       id="education"
       ref={sectionRef}
       style={{
-        background: 'linear-gradient(135deg, #ffe4cc 0%, #ffd4a3 100%)',
+        background: 'linear-gradient(135deg, #f0f7ed 0%, #dfe8db 100%)',
         padding: '80px 0',
         position: 'relative',
         overflow: 'hidden',
@@ -115,7 +115,7 @@ const Education = () => {
               width: i % 2 === 0 ? 70 : 90,
               height: i % 2 === 0 ? 70 : 90,
               borderRadius: '50%',
-              background: i % 2 === 0 ? 'rgba(255,152,0,0.15)' : 'rgba(255,179,0,0.25)',
+              background: i % 2 === 0 ? 'rgba(151,169,147,0.15)' : 'rgba(167,182,163,0.25)',
               left: `${10 + i * 20}%`,
               top: `${15 + (i % 3) * 30}%`,
               filter: 'blur(2px)',
@@ -156,7 +156,7 @@ const Education = () => {
             top: 0,
             bottom: 0,
             width: 4,
-            background: 'linear-gradient(180deg, #ff9800 0%, #ffb300 100%)',
+            background: 'linear-gradient(180deg, #5d8c5a 0%, #78a375 100%)',
             transform: 'translateX(-50%)',
             zIndex: 0
           }} />
@@ -168,21 +168,21 @@ const Education = () => {
                 background: '#fff',
                 padding: '24px',
                 borderRadius: 16,
-                boxShadow: '0 4px 20px rgba(255,152,0,0.15)',
-                border: '2px solid #ffe8cc',
+                boxShadow: '0 4px 20px rgba(151,169,147,0.15)',
+                border: '2px solid #e8f0e6',
                 transition: 'all 0.3s ease',
                 cursor: 'default'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateX(-8px)';
-                e.currentTarget.style.boxShadow = '0 8px 30px rgba(255,152,0,0.25)';
+                e.currentTarget.style.boxShadow = '0 8px 30px rgba(151,169,147,0.25)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateX(0)';
-                e.currentTarget.style.boxShadow = '0 4px 20px rgba(255,152,0,0.15)';
+                e.currentTarget.style.boxShadow = '0 4px 20px rgba(151,169,147,0.15)';
               }}
               >
-                <h4 style={{ color: '#ff9800', fontWeight: 700, fontSize: 20, marginBottom: 8 }}>Class 10th</h4>
+                <h4 style={{ color: '#5d8c5a', fontWeight: 700, fontSize: 20, marginBottom: 8 }}>Class 10th</h4>
                 <p style={{ color: '#333', fontWeight: 600, fontSize: 16, marginBottom: 6 }}>M.L. Khanna DAV Public School</p>
                 <p style={{ color: '#666', fontSize: 14, marginBottom: 4 }}>Dwarka, New Delhi</p>
                 <p style={{ color: '#444', fontSize: 15, fontWeight: 500 }}>Percentage: 86%</p>
@@ -192,9 +192,9 @@ const Education = () => {
               width: 24,
               height: 24,
               borderRadius: '50%',
-              background: 'linear-gradient(135deg, #ff9800, #ffb300)',
+              background: 'linear-gradient(135deg, #5d8c5a, #78a375)',
               border: '4px solid #fff',
-              boxShadow: '0 0 0 4px rgba(255,152,0,0.2)',
+              boxShadow: '0 0 0 4px rgba(151,169,147,0.2)',
               zIndex: 1,
               position: 'absolute',
               left: '50%',
@@ -210,9 +210,9 @@ const Education = () => {
               width: 24,
               height: 24,
               borderRadius: '50%',
-              background: 'linear-gradient(135deg, #ff9800, #ffb300)',
+              background: 'linear-gradient(135deg, #5d8c5a, #78a375)',
               border: '4px solid #fff',
-              boxShadow: '0 0 0 4px rgba(255,152,0,0.2)',
+              boxShadow: '0 0 0 4px rgba(151,169,147,0.2)',
               zIndex: 1,
               position: 'absolute',
               left: '50%',
@@ -223,21 +223,21 @@ const Education = () => {
                 background: '#fff',
                 padding: '24px',
                 borderRadius: 16,
-                boxShadow: '0 4px 20px rgba(255,152,0,0.15)',
-                border: '2px solid #ffe8cc',
+                boxShadow: '0 4px 20px rgba(151,169,147,0.15)',
+                border: '2px solid #e8f0e6',
                 transition: 'all 0.3s ease',
                 cursor: 'default'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateX(8px)';
-                e.currentTarget.style.boxShadow = '0 8px 30px rgba(255,152,0,0.25)';
+                e.currentTarget.style.boxShadow = '0 8px 30px rgba(151,169,147,0.25)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateX(0)';
-                e.currentTarget.style.boxShadow = '0 4px 20px rgba(255,152,0,0.15)';
+                e.currentTarget.style.boxShadow = '0 4px 20px rgba(151,169,147,0.15)';
               }}
               >
-                <h4 style={{ color: '#ff9800', fontWeight: 700, fontSize: 20, marginBottom: 8 }}>Class 12th</h4>
+                <h4 style={{ color: '#5d8c5a', fontWeight: 700, fontSize: 20, marginBottom: 8 }}>Class 12th</h4>
                 <p style={{ color: '#333', fontWeight: 600, fontSize: 16, marginBottom: 6 }}>Sri Chaitanya Junior College</p>
                 <p style={{ color: '#666', fontSize: 14, marginBottom: 4 }}>Hyderabad, Telangana</p>
                 <p style={{ color: '#444', fontSize: 15, fontWeight: 500 }}>Percentage: 96%</p>
@@ -252,21 +252,21 @@ const Education = () => {
                 background: '#fff',
                 padding: '24px',
                 borderRadius: 16,
-                boxShadow: '0 4px 20px rgba(255,152,0,0.15)',
-                border: '2px solid #ffe8cc',
+                boxShadow: '0 4px 20px rgba(151,169,147,0.15)',
+                border: '2px solid #e8f0e6',
                 transition: 'all 0.3s ease',
                 cursor: 'default'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateX(-8px)';
-                e.currentTarget.style.boxShadow = '0 8px 30px rgba(255,152,0,0.25)';
+                e.currentTarget.style.boxShadow = '0 8px 30px rgba(151,169,147,0.25)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateX(0)';
-                e.currentTarget.style.boxShadow = '0 4px 20px rgba(255,152,0,0.15)';
+                e.currentTarget.style.boxShadow = '0 4px 20px rgba(151,169,147,0.15)';
               }}
               >
-                <h4 style={{ color: '#ff9800', fontWeight: 700, fontSize: 20, marginBottom: 8 }}>B.Tech in Computer Science</h4>
+                <h4 style={{ color: '#5d8c5a', fontWeight: 700, fontSize: 20, marginBottom: 8 }}>B.Tech in Computer Science</h4>
                 <p style={{ color: '#333', fontWeight: 600, fontSize: 16, marginBottom: 6 }}>Jaypee Institute of Information Technology</p>
                 <p style={{ color: '#666', fontSize: 14, marginBottom: 4 }}>Sector 62, Noida</p>
                 <p style={{ color: '#444', fontSize: 15, fontWeight: 500 }}>CGPA: 8.0</p>
@@ -276,9 +276,9 @@ const Education = () => {
               width: 24,
               height: 24,
               borderRadius: '50%',
-              background: 'linear-gradient(135deg, #ff9800, #ffb300)',
+              background: 'linear-gradient(135deg, #5d8c5a, #78a375)',
               border: '4px solid #fff',
-              boxShadow: '0 0 0 4px rgba(255,152,0,0.2)',
+              boxShadow: '0 0 0 4px rgba(151,169,147,0.2)',
               zIndex: 1,
               position: 'absolute',
               left: '50%',

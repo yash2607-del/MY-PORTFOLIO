@@ -13,7 +13,7 @@ const projects = [
     tech: ['React.js', 'Node.js', 'Flask', 'MongoDB', 'Socket.IO', 'Machine Learning'],
     github: 'https://github.com/Dishi-Gautam/CyberGuard',
     live: '#',
-    gradient: 'linear-gradient(135deg, #ff9800 0%, #ffb300 100%)'
+    gradient: 'linear-gradient(135deg, #5d8c5a 0%, #78a375 100%)'
   
   },
   {
@@ -23,7 +23,7 @@ const projects = [
     tech: ['React.js', 'Node.js', 'MongoDB', 'Python', 'Flask', 'Cryptography'],
     github: 'https://github.com/yash2607-del/MedSecure',
     live: '#',
-    gradient: 'linear-gradient(135deg, #ff9800 0%, #ffb300 100%)'
+    gradient: 'linear-gradient(135deg, #5d8c5a 0%, #78a375 100%)'
    
   },
   {
@@ -33,7 +33,7 @@ const projects = [
     tech: ['React.js', 'Node.js', 'MongoDB', 'Blockchain', 'Ethereum', 'Gemini API'],
     github: 'https://github.com/yash2607-del/MediChain',
     live: 'https://medichain-chi.vercel.app/',
-    gradient: 'linear-gradient(135deg, #ff9800 0%, #ffb300 100%)'
+    gradient: 'linear-gradient(135deg, #5d8c5a 0%, #78a375 100%)'
     
   },
   {
@@ -43,7 +43,7 @@ const projects = [
     tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Bootstrap'],
     github: 'https://github.com/yash2607-del/Samaaj',
     live: '#',
-    gradient: 'linear-gradient(135deg, #ff9800 0%, #ffb300 100%)',
+    gradient: 'linear-gradient(135deg, #5d8c5a 0%, #78a375 100%)',
     status: 'in-progress'
     
   },
@@ -54,7 +54,7 @@ const projects = [
     tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'OpenAI', 'Tailwind CSS'],
     github: 'https://github.com/yash2607-del/nexthire',
     live: '#',
-    gradient: 'linear-gradient(135deg, #ff9800 0%, #ffb300 100%)',
+    gradient: 'linear-gradient(135deg, #5d8c5a 0%, #78a375 100%)',
     status: 'in-progress'
   
   },
@@ -65,7 +65,7 @@ const projects = [
     tech: ['HTML5', 'CSS3', 'JavaScript'],
     github: 'https://github.com/yash2607-del/ravi-portfolio',
     live: 'https://ravi-myportfolio.vercel.app/',
-    gradient: 'linear-gradient(135deg, #ff9800 0%, #ffb300 100%)'
+    gradient: 'linear-gradient(135deg, #5d8c5a 0%, #78a375 100%)'
   
   }
 ];
@@ -75,6 +75,7 @@ const Projects = () => {
   const headingRef = useRef(null);
   const cardsRef = useRef([]);
   const floatingShapesRef = useRef([]);
+  const reduceMotion = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   useEffect(() => {
     gsap.fromTo(
@@ -99,14 +100,14 @@ const Projects = () => {
       if (!card) return;
       gsap.fromTo(
         card,
-        { y: 80, opacity: 0, scale: 0.95 },
+        { y: reduceMotion ? 0 : 40, opacity: 0, scale: reduceMotion ? 1 : 0.98 },
         {
           y: 0,
           opacity: 1,
           scale: 1,
-          duration: 0.9,
-          delay: index * 0.1,
-          ease: 'back.out(1.2)',
+          duration: reduceMotion ? 0.5 : 0.7,
+          delay: index * (reduceMotion ? 0.05 : 0.08),
+          ease: 'power2.out',
           scrollTrigger: {
             trigger: card,
             start: 'top 85%',
@@ -117,22 +118,24 @@ const Projects = () => {
       );
     });
 
-    // Animate floating shapes
-    floatingShapesRef.current.forEach((shape) => {
-      if (!shape) return;
-      const animateShape = () => {
-        const x = gsap.utils.random(-70, 70);
-        const y = gsap.utils.random(-50, 50);
-        gsap.to(shape, {
-          x,
-          y,
-          duration: gsap.utils.random(10, 16),
-          ease: 'sine.inOut',
-          onComplete: animateShape,
-        });
-      };
-      animateShape();
-    });
+    // Animate floating shapes (lighter & fewer for performance)
+    if (!reduceMotion) {
+      floatingShapesRef.current.forEach((shape) => {
+        if (!shape) return;
+        const animateShape = () => {
+          const x = gsap.utils.random(-40, 40);
+          const y = gsap.utils.random(-25, 25);
+          gsap.to(shape, {
+            x,
+            y,
+            duration: gsap.utils.random(9, 12),
+            ease: 'sine.inOut',
+            onComplete: animateShape,
+          });
+        };
+        animateShape();
+      });
+    }
   }, []);
 
   return (
@@ -140,7 +143,7 @@ const Projects = () => {
       id="projects" 
       ref={sectionRef}
       style={{
-        background: 'linear-gradient(135deg, #ffe4cc 0%, #ffd4a3 100%)',
+        background: 'linear-gradient(135deg, #f0f7ed 0%, #dfe8db 100%)',
         padding: '80px 0',
         minHeight: '100vh',
         position: 'relative',
@@ -158,29 +161,29 @@ const Projects = () => {
         zIndex: 0,
         overflow: 'hidden'
       }}>
-        {/* Animated shapes */}
-        {[...Array(10)].map((_, i) => (
+        {/* Animated shapes (reduced count) */}
+        {[...Array(4)].map((_, i) => (
           <div
             key={`shape-${i}`}
             ref={el => (floatingShapesRef.current[i] = el)}
             style={{
               position: 'absolute',
-              width: 65 + (i % 4) * 20,
-              height: 65 + (i % 4) * 20,
+              width: 60 + (i % 3) * 16,
+              height: 60 + (i % 3) * 16,
               borderRadius: i % 3 === 0 ? '50%' : '40%',
               background: i % 2 === 0 
-                ? 'linear-gradient(135deg, rgba(255,152,0,0.22), rgba(255,179,0,0.14))'
-                : 'rgba(255,179,0,0.28)',
-              left: `${10 + i * 10}%`,
-              top: `${12 + (i % 4) * 22}%`,
-              filter: 'blur(2px)',
-              boxShadow: '0 5px 18px rgba(255,152,0,0.1)'
+                ? 'linear-gradient(135deg, rgba(151, 169, 147, 0.16), rgba(167, 182, 163, 0.10))'
+                : 'rgba(167, 182, 163, 0.18)',
+              left: `${12 + i * 18}%`,
+              top: `${15 + (i % 3) * 24}%`,
+              filter: 'blur(1px)',
+              willChange: 'transform'
             }}
           />
         ))}
         
-        {/* Small accent dots */}
-        {[...Array(20)].map((_, i) => (
+        {/* Small accent dots (reduced count) */}
+        {[...Array(8)].map((_, i) => (
           <div
             key={`dot-${i}`}
             style={{
@@ -188,9 +191,9 @@ const Projects = () => {
               width: 6 + (i % 2) * 3,
               height: 6 + (i % 2) * 3,
               borderRadius: '50%',
-              background: 'rgba(255,152,0,0.35)',
-              left: `${3 + i * 5}%`,
-              top: `${8 + (i % 6) * 15}%`
+              background: 'rgba(151, 169, 147, 0.25)',
+              left: `${6 + i * 9}%`,
+              top: `${10 + (i % 4) * 22}%`
             }}
           />
         ))}
@@ -198,23 +201,23 @@ const Projects = () => {
         {/* Soft gradient glows */}
         <div style={{
           position: 'absolute',
-          width: 320,
-          height: 320,
+          width: 260,
+          height: 260,
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(255,152,0,0.14), transparent 70%)',
+          background: 'radial-gradient(circle, rgba(151, 169, 147, 0.12), transparent 70%)',
           top: '5%',
           right: '0%',
-          filter: 'blur(45px)'
+          filter: 'blur(32px)'
         }} />
         <div style={{
           position: 'absolute',
-          width: 290,
-          height: 290,
+          width: 240,
+          height: 240,
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(255,179,0,0.18), transparent 70%)',
+          background: 'radial-gradient(circle, rgba(167, 182, 163, 0.14), transparent 70%)',
           bottom: '8%',
           left: '2%',
-          filter: 'blur(38px)'
+          filter: 'blur(28px)'
         }} />
       </div>
       <div className="container" style={{ maxWidth: 1200 }}>
@@ -243,7 +246,7 @@ const Projects = () => {
             style={{
               width: 80,
               height: 4,
-              background: 'linear-gradient(90deg, #ff9800 0%, #ffb300 100%)',
+              background: 'linear-gradient(90deg, #5d8c5a 0%, #78a375 100%)',
               margin: '0 auto',
               borderRadius: 4,
             }}
@@ -263,21 +266,21 @@ const Projects = () => {
                 style={{
                   borderRadius: 16,
                   overflow: 'hidden',
-                  boxShadow: '0 8px 20px rgba(255,152,0,0.15)',
+                  boxShadow: '0 8px 20px rgba(151,169,147,0.15)',
                   transition: 'all 0.3s',
                   background: '#fff'
                 }}
                 onMouseEnter={(e) => {
                   gsap.to(e.currentTarget, {
                     y: -8,
-                    boxShadow: '0 12px 30px rgba(255,152,0,0.25)',
+                    boxShadow: '0 12px 30px rgba(151,169,147,0.25)',
                     duration: 0.3,
                   });
                 }}
                 onMouseLeave={(e) => {
                   gsap.to(e.currentTarget, {
                     y: 0,
-                    boxShadow: '0 8px 20px rgba(255,152,0,0.15)',
+                    boxShadow: '0 8px 20px rgba(151,169,147,0.15)',
                     duration: 0.3,
                   });
                 }}
@@ -298,7 +301,7 @@ const Projects = () => {
                       top: 12,
                       left: 12,
                       background: 'rgba(255,255,255,0.9)',
-                      color: '#ff9800',
+                      color: '#5d8c5a',
                       border: '1px solid rgba(255,255,255,0.7)',
                       borderRadius: 12,
                       padding: '6px 10px',
@@ -441,14 +444,14 @@ const Projects = () => {
                         <span 
                           key={i}
                           style={{
-                            background: 'linear-gradient(135deg, #ffe8cc 0%, #ffd699 100%)',
+                            background: 'linear-gradient(135deg, #e8f0e6 0%, #c8d9c4 100%)',
                             color: '#333',
                             padding: '5px 12px',
                             borderRadius: 15,
                             fontSize: 12,
                             fontWeight: 600,
                             fontFamily: 'Inter, Arial, sans-serif',
-                            border: '1px solid rgba(255,152,0,0.15)'
+                            border: '1px solid rgba(151,169,147,0.15)'
                           }}
                         >
                           {tech}
@@ -474,16 +477,16 @@ const Projects = () => {
                       fontSize: 13,
                       fontWeight: 600,
                       fontFamily: 'Poppins, Inter, Arial, sans-serif',
-                      boxShadow: '0 4px 12px rgba(255,152,0,0.25)',
+                      boxShadow: '0 4px 12px rgba(151,169,147,0.25)',
                       transition: 'all 0.3s'
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.transform = 'translateY(-2px)';
-                      e.currentTarget.style.boxShadow = '0 6px 16px rgba(255,152,0,0.35)';
+                      e.currentTarget.style.boxShadow = '0 6px 16px rgba(151,169,147,0.35)';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.transform = 'translateY(0)';
-                      e.currentTarget.style.boxShadow = '0 4px 12px rgba(255,152,0,0.25)';
+                      e.currentTarget.style.boxShadow = '0 4px 12px rgba(151,169,147,0.25)';
                     }}
                   >
                     Read More
@@ -506,23 +509,23 @@ const Projects = () => {
               alignItems: 'center',
               gap: 10,
               padding: '16px 40px',
-              background: 'linear-gradient(135deg, #ff9800 0%, #ffb300 100%)',
+              background: 'linear-gradient(135deg, #5d8c5a 0%, #78a375 100%)',
               color: '#fff',
               textDecoration: 'none',
               borderRadius: 30,
               fontSize: 16,
               fontWeight: 700,
               fontFamily: 'Poppins, Inter, Arial, sans-serif',
-              boxShadow: '0 6px 20px rgba(255,152,0,0.3)',
+              boxShadow: '0 6px 20px rgba(151,169,147,0.3)',
               transition: 'all 0.3s'
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'translateY(-3px)';
-              e.currentTarget.style.boxShadow = '0 8px 25px rgba(255,152,0,0.4)';
+              e.currentTarget.style.boxShadow = '0 8px 25px rgba(151,169,147,0.4)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 6px 20px rgba(255,152,0,0.3)';
+              e.currentTarget.style.boxShadow = '0 6px 20px rgba(151,169,147,0.3)';
             }}
           >
             View All Projects on GitHub
