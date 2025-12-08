@@ -12,7 +12,6 @@ const projects = [
     description: 'Cybersecurity monitoring platform for campus networks. Features tamper-proof logging, real-time threat detection, AI-powered attack classification, and honeypot deception.',
     tech: ['React.js', 'Node.js', 'Flask', 'MongoDB', 'Socket.IO', 'Machine Learning'],
     github: 'https://github.com/Dishi-Gautam/CyberGuard',
-    live: '#',
     gradient: 'linear-gradient(135deg, #5d8c5a 0%, #78a375 100%)'
   
   },
@@ -22,7 +21,6 @@ const projects = [
     description: 'Secure medical data exchange using steganography and encryption. Doctors embed encrypted patient data in images/audio files for safe hospital network sharing.',
     tech: ['React.js', 'Node.js', 'MongoDB', 'Python', 'Flask', 'Cryptography'],
     github: 'https://github.com/yash2607-del/MedSecure',
-    live: '#',
     gradient: 'linear-gradient(135deg, #5d8c5a 0%, #78a375 100%)'
    
   },
@@ -42,7 +40,6 @@ const projects = [
     description: 'Civic issue reporting platform bridging citizens and solutions. Users report local problems with photos and locations, while moderators respond in real-time.',
     tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Bootstrap'],
     github: 'https://github.com/yash2607-del/Samaaj',
-    live: '#',
     gradient: 'linear-gradient(135deg, #5d8c5a 0%, #78a375 100%)',
     status: 'in-progress'
     
@@ -53,7 +50,6 @@ const projects = [
     description: 'AI-powered recruitment platform streamlining hiring process with automated resume screening, candidate matching, interview scheduling, and performance analytics.',
     tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'OpenAI', 'Tailwind CSS'],
     github: 'https://github.com/yash2607-del/nexthire',
-    live: '#',
     gradient: 'linear-gradient(135deg, #5d8c5a 0%, #78a375 100%)',
     status: 'in-progress'
   
