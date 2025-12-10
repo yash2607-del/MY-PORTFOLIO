@@ -167,9 +167,7 @@ const Projects = () => {
               width: 60 + (i % 3) * 16,
               height: 60 + (i % 3) * 16,
               borderRadius: i % 3 === 0 ? '50%' : '40%',
-              background: i % 2 === 0 
-                ? 'linear-gradient(135deg, rgba(151, 169, 147, 0.16), rgba(167, 182, 163, 0.10))'
-                : 'rgba(167, 182, 163, 0.18)',
+              background: 'rgba(255,255,255,0.85)',
               left: `${12 + i * 18}%`,
               top: `${15 + (i % 3) * 24}%`,
               filter: 'blur(1px)',
@@ -187,7 +185,7 @@ const Projects = () => {
               width: 6 + (i % 2) * 3,
               height: 6 + (i % 2) * 3,
               borderRadius: '50%',
-              background: 'rgba(151, 169, 147, 0.25)',
+              background: 'rgba(255, 255, 255, 0.6)',
               left: `${6 + i * 9}%`,
               top: `${10 + (i % 4) * 22}%`
             }}
@@ -200,7 +198,7 @@ const Projects = () => {
           width: 260,
           height: 260,
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(151, 169, 147, 0.12), transparent 70%)',
+          background: 'radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent 70%)',
           top: '5%',
           right: '0%',
           filter: 'blur(32px)'
@@ -210,7 +208,7 @@ const Projects = () => {
           width: 240,
           height: 240,
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(167, 182, 163, 0.14), transparent 70%)',
+          background: 'radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent 70%)',
           bottom: '8%',
           left: '2%',
           filter: 'blur(28px)'
@@ -310,25 +308,7 @@ const Projects = () => {
                       In Progress
                     </div>
                   )}
-                  {/* Background Decoration */}
-                  <div style={{
-                    position: 'absolute',
-                    top: -20,
-                    right: -20,
-                    width: 100,
-                    height: 100,
-                    borderRadius: '50%',
-                    background: 'rgba(255,255,255,0.1)',
-                  }} />
-                  <div style={{
-                    position: 'absolute',
-                    bottom: -15,
-                    left: -15,
-                    width: 70,
-                    height: 70,
-                    borderRadius: '50%',
-                    background: 'rgba(255,255,255,0.1)',
-                  }} />
+                  <div style={{ position: 'absolute', bottom: -15, left: -15, width: 70, height: 70, borderRadius: '50%', background: 'rgba(255,255,255,0.1)' }} />
 
                   <div style={{ position: 'relative', zIndex: 1 }}>
                     <div className="d-flex align-items-center justify-content-between mb-2">
@@ -368,33 +348,35 @@ const Projects = () => {
                         >
                           <FaGithub size={16} />
                         </a>
-                        <a 
-                          href={project.live}
-                          style={{
-                            width: 32,
-                            height: 32,
-                            borderRadius: '50%',
-                            background: 'rgba(255,255,255,0.25)',
-                            backdropFilter: 'blur(10px)',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            color: '#fff',
-                            textDecoration: 'none',
-                            transition: 'all 0.3s',
-                            border: '1px solid rgba(255,255,255,0.3)'
-                          }}
-                          onMouseEnter={(e) => {
-                            e.currentTarget.style.background = 'rgba(255,255,255,0.4)';
-                            e.currentTarget.style.transform = 'scale(1.1)';
-                          }}
-                          onMouseLeave={(e) => {
-                            e.currentTarget.style.background = 'rgba(255,255,255,0.25)';
-                            e.currentTarget.style.transform = 'scale(1)';
-                          }}
-                        >
-                          <FaExternalLinkAlt size={14} />
-                        </a>
+                        {project.live && project.live !== '#' && (
+                          <a 
+                            href={project.live}
+                            style={{
+                              width: 32,
+                              height: 32,
+                              borderRadius: '50%',
+                              background: 'rgba(255,255,255,0.25)',
+                              backdropFilter: 'blur(10px)',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              color: '#fff',
+                              textDecoration: 'none',
+                              transition: 'all 0.3s',
+                              border: '1px solid rgba(255,255,255,0.3)'
+                            }}
+                            onMouseEnter={(e) => {
+                              e.currentTarget.style.background = 'rgba(255,255,255,0.4)';
+                              e.currentTarget.style.transform = 'scale(1.1)';
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.style.background = 'rgba(255,255,255,0.25)';
+                              e.currentTarget.style.transform = 'scale(1)';
+                            }}
+                          >
+                            <FaExternalLinkAlt size={14} />
+                          </a>
+                        )}
                       </div>
                     </div>
                     <h3 style={{
