@@ -43,7 +43,7 @@ const nameFont = {
 
 const sections = [
   { id: "hero", label: "Home" },
-  { id: "experience", label: "About Me" },
+  { id: "experience", label: "Experience" },
   { id: "education", label: "Education" },
   { id: "projects", label: "Projects" },
   { id: "skills", label: "Skills" },
