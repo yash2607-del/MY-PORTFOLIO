@@ -198,7 +198,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="hero" className="d-flex align-items-center position-relative" ref={heroRef} style={{minHeight: '100vh', background: 'linear-gradient(135deg, #f0f7ed 0%, #dfe8db 100%)', overflow: 'hidden'}}>
+    <section id="hero" className="d-flex align-items-center position-relative" ref={heroRef} style={{minHeight: '100vh', background: 'linear-gradient(135deg, #e6f5ff 0%, #d4ebff 100%)', overflow: 'hidden'}}>
       <style>{`
         @keyframes blink { 50% { opacity: 0; } }
         .type-cursor { display: inline-block; animation: blink 1s step-end infinite; }
@@ -222,13 +222,11 @@ const Hero = () => {
                 width: size,
                 height: size,
                 borderRadius: isSpecial ? '30%' : '50%',
-                background: i % 2 === 0 
-                  ? 'linear-gradient(135deg, rgba(151, 169, 147, 0.25), rgba(167, 182, 163, 0.15))'
-                  : 'rgba(167, 182, 163, 0.3)',
+                background: 'rgba(255, 255, 255, 0.6)',
                 left: `${left}%`,
                 top: `${top}%`,
                 filter: 'blur(2px)',
-                boxShadow: '0 4px 15px rgba(151,169,147,0.1)',
+                boxShadow: '0 4px 15px rgba(255,255,255,0.3)',
                 zIndex: 1,
               }}
             />
@@ -244,7 +242,7 @@ const Hero = () => {
               width: 100 + i * 40,
               height: 100 + i * 40,
               borderRadius: '50%',
-              border: '2px solid rgba(151, 169, 147, 0.12)',
+              border: '2px solid rgba(255, 255, 255, 0.4)',
               left: `${15 + i * 20}%`,
               top: `${10 + i * 15}%`,
               animation: `rotate ${20 + i * 5}s linear infinite`,
@@ -259,7 +257,7 @@ const Hero = () => {
           width: 300,
           height: 300,
           borderRadius: '40%',
-          background: 'radial-gradient(circle, rgba(151, 169, 147, 0.15), transparent 70%)',
+          background: 'radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent 70%)',
           top: '10%',
           right: '5%',
           filter: 'blur(30px)'
@@ -269,7 +267,7 @@ const Hero = () => {
           width: 250,
           height: 250,
           borderRadius: '45%',
-          background: 'radial-gradient(circle, rgba(167, 182, 163, 0.2), transparent 70%)',
+          background: 'radial-gradient(circle, rgba(255, 255, 255, 0.45), transparent 70%)',
           bottom: '15%',
           left: '8%',
           filter: 'blur(25px)'
@@ -285,7 +283,7 @@ const Hero = () => {
         <div className="row align-items-center">
           <div className="col-lg-8 offset-lg-2 text-center">
             <h2 ref={titleRef} className="fw-bold mb-3" style={{color: '#030303ff', fontSize: 54, letterSpacing: 2}}>Hey</h2>
-            <h1 ref={nameRef} className="fw-bold mb-3" style={{color: '#222', fontSize: 64, lineHeight: 1.2, fontFamily: 'Poppins, sans-serif'}}>I'm <span style={{color: '#4a7c47', fontWeight: 900}}>Yash Raj</span></h1>
+            <h1 ref={nameRef} className="fw-bold mb-3" style={{color: '#222', fontSize: 64, lineHeight: 1.2, fontFamily: 'Poppins, sans-serif'}}>I'm <span style={{color: '#6eb5e8', fontWeight: 900}}>Yash Raj</span></h1>
             <div ref={typedBoxRef} className="mb-4" style={{fontSize: 26, color: '#555', fontWeight: 500, minHeight: 40}}>
               <span>{typedText}</span>
               <span className="type-cursor" style={{marginLeft: 4}}>|</span>
@@ -299,9 +297,9 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   ref={el => iconsRef.current[i] = el}
                   className="d-inline-flex align-items-center justify-content-center rounded-circle"
-                  style={{background: 'linear-gradient(135deg, #5d8c5a 0%, #78a375 100%)', width: 50, height: 50, color: '#ffffff', fontSize: 22, border: '2px solid rgba(255, 255, 255, 0.5)', boxShadow: '0 4px 15px rgba(151, 169, 147, 0.3)', transition: 'all 0.3s ease'}}
-                  onMouseEnter={e => gsap.to(e.currentTarget, {scale: 1.15, boxShadow: '0 6px 20px rgba(151, 169, 147, 0.5)', duration: 0.2})}
-                  onMouseLeave={e => gsap.to(e.currentTarget, {scale: 1, boxShadow: '0 4px 15px rgba(151, 169, 147, 0.3)', duration: 0.2})}
+                  style={{background: 'linear-gradient(135deg, #6eb5e8 0%, #8dc9f0 100%)', width: 50, height: 50, color: '#ffffff', fontSize: 22, border: '2px solid rgba(255, 255, 255, 0.5)', boxShadow: '0 4px 15px rgba(110, 181, 232, 0.3)', transition: 'all 0.3s ease'}}
+                  onMouseEnter={e => gsap.to(e.currentTarget, {scale: 1.15, boxShadow: '0 6px 20px rgba(110, 181, 232, 0.5)', duration: 0.2})}
+                  onMouseLeave={e => gsap.to(e.currentTarget, {scale: 1, boxShadow: '0 4px 15px rgba(110, 181, 232, 0.3)', duration: 0.2})}
                 >
                   {s.icon}
                 </a>
@@ -313,9 +311,9 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-lg fw-bold shadow"
-              style={{background: '#ffffff', color: '#4a7c47', border: '2px solid #5d8c5a', borderRadius: 30, fontSize: 18, padding: '14px 40px', transition: 'all 0.3s ease', boxShadow: '0 6px 20px rgba(151, 169, 147, 0.25)', letterSpacing: 1, fontWeight: 700}}
-              onMouseEnter={e => gsap.to(e.currentTarget, {scale: 1.05, background: 'linear-gradient(135deg, #5d8c5a 0%, #78a375 100%)', color: '#fff', boxShadow: '0 8px 25px rgba(151, 169, 147, 0.4)', duration: 0.2})}
-              onMouseLeave={e => gsap.to(e.currentTarget, {scale: 1, background: '#ffffff', color: '#4a7c47', boxShadow: '0 6px 20px rgba(151, 169, 147, 0.25)', duration: 0.2})}
+              style={{background: '#ffffff', color: '#6eb5e8', border: '2px solid #6eb5e8', borderRadius: 30, fontSize: 18, padding: '14px 40px', transition: 'all 0.3s ease', boxShadow: '0 6px 20px rgba(110, 181, 232, 0.25)', letterSpacing: 1, fontWeight: 700}}
+              onMouseEnter={e => gsap.to(e.currentTarget, {scale: 1.05, background: 'linear-gradient(135deg, #6eb5e8 0%, #8dc9f0 100%)', color: '#fff', boxShadow: '0 8px 25px rgba(110, 181, 232, 0.4)', duration: 0.2})}
+              onMouseLeave={e => gsap.to(e.currentTarget, {scale: 1, background: '#ffffff', color: '#6eb5e8', boxShadow: '0 6px 20px rgba(110, 181, 232, 0.25)', duration: 0.2})}
             >
               Hire Me
             </a>

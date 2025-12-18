@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Snowfall from 'react-snowfall';
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Experience from "./components/Experience";
@@ -9,7 +10,6 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Portfolio() {
@@ -40,7 +40,27 @@ export default function Portfolio() {
 	}, []);
 
 	return (
-		<div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+		<div style={{ 
+			display: 'flex', 
+			flexDirection: 'column', 
+			minHeight: '100vh',
+			background: 'linear-gradient(to bottom, #e6f2ff 0%, #f0f8ff 50%, #e0f0ff 100%)',
+			position: 'relative'
+		}}>
+			<Snowfall 
+				color="#ffffff"
+				snowflakeCount={150}
+				radius={[5, 12]}
+				speed={[0.5, 2.0]}
+				wind={[-0.5, 1.0]}
+				style={{
+					position: 'fixed',
+					width: '100vw',
+					height: '100vh',
+					zIndex: 9999,
+					pointerEvents: 'none'
+				}}
+			/>
 			<Navbar />
 			<div style={{ flex: '1 0 auto' }}>
 				<Hero />

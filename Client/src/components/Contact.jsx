@@ -158,7 +158,7 @@ const Contact = () => {
       id="contact"
       ref={sectionRef}
       style={{
-        background: 'linear-gradient(135deg, #f0f7ed 0%, #dfe8db 100%)',
+        background: 'linear-gradient(135deg, #e6f5ff 0%, #d4ebff 100%)',
         padding: '100px 0',
         scrollMarginTop: 100,
         position: 'relative',
@@ -186,7 +186,7 @@ const Contact = () => {
               width: i % 2 === 0 ? 70 : 90,
               height: i % 2 === 0 ? 70 : 90,
               borderRadius: '50%',
-              background: i % 2 === 0 ? 'rgba(151,169,147,0.18)' : 'rgba(167,182,163,0.28)',
+              background: 'rgba(255, 255, 255, 0.5)',
               left: `${10 + i * 15}%`,
               top: `${20 + (i % 3) * 25}%`,
               filter: 'blur(2px)'
@@ -205,7 +205,7 @@ const Contact = () => {
               fontSize: 48,
               color: '#222',
               letterSpacing: 1.2,
-              textShadow: '2px 2px 4px rgba(151,169,147,0.1)'
+              textShadow: '2px 2px 4px rgba(110,181,232,0.1)'
             }}
           >
             Get In Touch
@@ -225,7 +225,7 @@ const Contact = () => {
             style={{
               width: 80,
               height: 4,
-              background: 'linear-gradient(90deg, #5d8c5a 0%, #78a375 100%)',
+              background: 'linear-gradient(90deg, #6eb5e8 0%, #8dc9f0 100%)',
               margin: '0 auto',
               borderRadius: 4
             }}
@@ -240,7 +240,7 @@ const Contact = () => {
                 background: '#fff',
                 borderRadius: 25,
                 padding: '40px',
-                boxShadow: '0 15px 40px rgba(151,169,147,0.15)',
+                boxShadow: '0 15px 40px rgba(110,181,232,0.15)',
                 transform: 'perspective(1000px)',
                 transformStyle: 'preserve-3d',
                 transition: 'box-shadow 0.3s ease',
@@ -259,7 +259,7 @@ const Contact = () => {
                   rotationX: rotateX,
                   rotationY: rotateY,
                   y: -6,
-                  boxShadow: '0 25px 60px rgba(151,169,147,0.28)',
+                  boxShadow: '0 25px 60px rgba(110,181,232,0.28)',
                   duration: 0.3,
                   ease: 'power2.out'
                 });
@@ -269,7 +269,7 @@ const Contact = () => {
                   rotationX: 0,
                   rotationY: 0,
                   y: 0,
-                  boxShadow: '0 15px 40px rgba(151,169,147,0.15)',
+                  boxShadow: '0 15px 40px rgba(110,181,232,0.15)',
                   duration: 0.5,
                   ease: 'power2.out'
                 });
@@ -394,14 +394,14 @@ const Contact = () => {
                   style={{
                     marginTop: 25,
                     padding: '15px 40px',
-                    background: 'linear-gradient(135deg, #5d8c5a 0%, #78a375 100%)',
+                    background: 'linear-gradient(135deg, #6eb5e8 0%, #8dc9f0 100%)',
                     color: '#fff',
                     border: 'none',
                     borderRadius: 25,
                     fontSize: 16,
                     fontWeight: 700,
                     cursor: submitStatus === 'sending' ? 'not-allowed' : 'pointer',
-                    boxShadow: '0 6px 20px rgba(151,169,147,0.3)',
+                    boxShadow: '0 6px 20px rgba(110,181,232,0.3)',
                     fontFamily: 'Poppins, Inter, Arial, sans-serif',
                     opacity: submitStatus === 'sending' ? 0.7 : 1,
                     transition: 'all 0.3s'
@@ -450,13 +450,13 @@ const Contact = () => {
                       width: 44,
                       height: 44,
                       borderRadius: '50%',
-                      background: '#78a375',
+                      background: '#8dc9f0',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
                       fontSize: 20,
                       color: '#fff',
-                      border: '1px solid #ffe0a3'
+                      border: '1px solid #d4ebff'
                     }}
                   >
                     {item.icon}
@@ -502,7 +502,7 @@ const Contact = () => {
                       width: 44,
                       height: 44,
                       borderRadius: '50%',
-                      background: '#78a375',
+                      background: '#8dc9f0',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -511,7 +511,7 @@ const Contact = () => {
                       textDecoration: 'none',
                       border: '1px solid #ffe0a3',
                       transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-                      boxShadow: '0 6px 16px rgba(151,169,147,0.28)'
+                      boxShadow: '0 6px 16px rgba(110,181,232,0.28)'
                     }}
                     onMouseEnter={(e) => gsap.to(e.currentTarget, { y: -3, rotateY: 12, duration: 0.2 })}
                     onMouseLeave={(e) => gsap.to(e.currentTarget, { y: 0, rotateY: 0, duration: 0.25 })}

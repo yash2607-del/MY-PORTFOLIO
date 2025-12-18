@@ -12,7 +12,7 @@ const projects = [
     description: 'Cybersecurity monitoring platform for campus networks. Features tamper-proof logging, real-time threat detection, AI-powered attack classification, and honeypot deception.',
     tech: ['React.js', 'Node.js', 'Flask', 'MongoDB', 'Socket.IO', 'Machine Learning'],
     github: 'https://github.com/Dishi-Gautam/CyberGuard',
-    gradient: 'linear-gradient(135deg, #5d8c5a 0%, #78a375 100%)'
+    gradient: 'linear-gradient(135deg, #6eb5e8 0%, #8dc9f0 100%)'
   
   },
   {
@@ -21,7 +21,7 @@ const projects = [
     description: 'Secure medical data exchange using steganography and encryption. Doctors embed encrypted patient data in images/audio files for safe hospital network sharing.',
     tech: ['React.js', 'Node.js', 'MongoDB', 'Python', 'Flask', 'Cryptography'],
     github: 'https://github.com/yash2607-del/MedSecure',
-    gradient: 'linear-gradient(135deg, #5d8c5a 0%, #78a375 100%)'
+    gradient: 'linear-gradient(135deg, #6eb5e8 0%, #8dc9f0 100%)'
    
   },
   {
@@ -31,7 +31,7 @@ const projects = [
     tech: ['React.js', 'Node.js', 'MongoDB', 'Blockchain', 'Ethereum', 'Gemini API'],
     github: 'https://github.com/yash2607-del/MediChain',
     live: 'https://medichain-chi.vercel.app/',
-    gradient: 'linear-gradient(135deg, #5d8c5a 0%, #78a375 100%)'
+    gradient: 'linear-gradient(135deg, #6eb5e8 0%, #8dc9f0 100%)'
     
   },
   {
@@ -40,7 +40,7 @@ const projects = [
     description: 'Civic issue reporting platform bridging citizens and solutions. Users report local problems with photos and locations, while moderators respond in real-time.',
     tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Bootstrap'],
     github: 'https://github.com/yash2607-del/Samaaj',
-    gradient: 'linear-gradient(135deg, #5d8c5a 0%, #78a375 100%)',
+    gradient: 'linear-gradient(135deg, #6eb5e8 0%, #8dc9f0 100%)',
     status: 'in-progress'
     
   },
@@ -50,7 +50,7 @@ const projects = [
     description: 'AI-powered recruitment platform streamlining hiring process with automated resume screening, candidate matching, interview scheduling, and performance analytics.',
     tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'OpenAI', 'Tailwind CSS'],
     github: 'https://github.com/yash2607-del/nexthire',
-    gradient: 'linear-gradient(135deg, #5d8c5a 0%, #78a375 100%)',
+    gradient: 'linear-gradient(135deg, #6eb5e8 0%, #8dc9f0 100%)',
     status: 'in-progress'
   
   },
@@ -61,7 +61,7 @@ const projects = [
     tech: ['HTML5', 'CSS3', 'JavaScript'],
     github: 'https://github.com/yash2607-del/ravi-portfolio',
     live: 'https://ravi-myportfolio.vercel.app/',
-    gradient: 'linear-gradient(135deg, #5d8c5a 0%, #78a375 100%)'
+    gradient: 'linear-gradient(135deg, #6eb5e8 0%, #8dc9f0 100%)'
   
   }
 ];
@@ -139,7 +139,7 @@ const Projects = () => {
       id="projects" 
       ref={sectionRef}
       style={{
-        background: 'linear-gradient(135deg, #f0f7ed 0%, #dfe8db 100%)',
+        background: 'linear-gradient(135deg, #e6f5ff 0%, #d4ebff 100%)',
         padding: '80px 0',
         minHeight: '100vh',
         position: 'relative',
@@ -240,7 +240,7 @@ const Projects = () => {
             style={{
               width: 80,
               height: 4,
-              background: 'linear-gradient(90deg, #5d8c5a 0%, #78a375 100%)',
+              background: 'linear-gradient(90deg, #6eb5e8 0%, #8dc9f0 100%)',
               margin: '0 auto',
               borderRadius: 4,
             }}
@@ -260,21 +260,21 @@ const Projects = () => {
                 style={{
                   borderRadius: 16,
                   overflow: 'hidden',
-                  boxShadow: '0 8px 20px rgba(151,169,147,0.15)',
+                  boxShadow: '0 8px 20px rgba(110,181,232,0.15)',
                   transition: 'all 0.3s',
                   background: '#fff'
                 }}
                 onMouseEnter={(e) => {
                   gsap.to(e.currentTarget, {
                     y: -8,
-                    boxShadow: '0 12px 30px rgba(151,169,147,0.25)',
+                    boxShadow: '0 12px 30px rgba(110,181,232,0.25)',
                     duration: 0.3,
                   });
                 }}
                 onMouseLeave={(e) => {
                   gsap.to(e.currentTarget, {
                     y: 0,
-                    boxShadow: '0 8px 20px rgba(151,169,147,0.15)',
+                    boxShadow: '0 8px 20px rgba(110,181,232,0.15)',
                     duration: 0.3,
                   });
                 }}
@@ -295,7 +295,7 @@ const Projects = () => {
                       top: 12,
                       left: 12,
                       background: 'rgba(255,255,255,0.9)',
-                      color: '#5d8c5a',
+                      color: '#6eb5e8',
                       border: '1px solid rgba(255,255,255,0.7)',
                       borderRadius: 12,
                       padding: '6px 10px',
@@ -422,14 +422,14 @@ const Projects = () => {
                         <span 
                           key={i}
                           style={{
-                            background: 'linear-gradient(135deg, #e8f0e6 0%, #c8d9c4 100%)',
+                            background: 'linear-gradient(135deg, #e0f2ff 0%, #cde7ff 100%)',
                             color: '#333',
                             padding: '5px 12px',
                             borderRadius: 15,
                             fontSize: 12,
                             fontWeight: 600,
                             fontFamily: 'Inter, Arial, sans-serif',
-                            border: '1px solid rgba(151,169,147,0.15)'
+                            border: '1px solid rgba(110,181,232,0.15)'
                           }}
                         >
                           {tech}
@@ -455,16 +455,16 @@ const Projects = () => {
                       fontSize: 13,
                       fontWeight: 600,
                       fontFamily: 'Poppins, Inter, Arial, sans-serif',
-                      boxShadow: '0 4px 12px rgba(151,169,147,0.25)',
+                      boxShadow: '0 4px 12px rgba(110,181,232,0.25)',
                       transition: 'all 0.3s'
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.transform = 'translateY(-2px)';
-                      e.currentTarget.style.boxShadow = '0 6px 16px rgba(151,169,147,0.35)';
+                      e.currentTarget.style.boxShadow = '0 6px 16px rgba(110,181,232,0.35)';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.transform = 'translateY(0)';
-                      e.currentTarget.style.boxShadow = '0 4px 12px rgba(151,169,147,0.25)';
+                      e.currentTarget.style.boxShadow = '0 4px 12px rgba(110,181,232,0.25)';
                     }}
                   >
                     Read More
@@ -487,23 +487,23 @@ const Projects = () => {
               alignItems: 'center',
               gap: 10,
               padding: '16px 40px',
-              background: 'linear-gradient(135deg, #5d8c5a 0%, #78a375 100%)',
+              background: 'linear-gradient(135deg, #6eb5e8 0%, #8dc9f0 100%)',
               color: '#fff',
               textDecoration: 'none',
               borderRadius: 30,
               fontSize: 16,
               fontWeight: 700,
               fontFamily: 'Poppins, Inter, Arial, sans-serif',
-              boxShadow: '0 6px 20px rgba(151,169,147,0.3)',
+              boxShadow: '0 6px 20px rgba(110,181,232,0.3)',
               transition: 'all 0.3s'
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'translateY(-3px)';
-              e.currentTarget.style.boxShadow = '0 8px 25px rgba(151,169,147,0.4)';
+              e.currentTarget.style.boxShadow = '0 8px 25px rgba(110,181,232,0.4)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 6px 20px rgba(151,169,147,0.3)';
+              e.currentTarget.style.boxShadow = '0 6px 20px rgba(110,181,232,0.3)';
             }}
           >
             View All Projects on GitHub

@@ -31,7 +31,7 @@ const Experience = () => {
     location: 'Noida',
     period: 'July 2025 - September 2025',
     type: 'Internship',
-    gradient: 'linear-gradient(135deg, #5d8c5a 0%, #78a375 100%)',
+    gradient: 'linear-gradient(135deg, #6eb5e8 0%, #8dc9f0 100%)',
     website: {
       label: 'Project Website',
       url: 'https://www.lmpowersolution.com/'
@@ -191,7 +191,7 @@ const Experience = () => {
       id="experience"
       ref={sectionRef}
       style={{
-        background: 'linear-gradient(135deg, #f0f7ed 0%, #dfe8db 100%)',
+        background: 'linear-gradient(135deg, #e6f5ff 0%, #d4ebff 100%)',
         padding: '80px 0',
         position: 'relative',
         overflow: 'hidden'
@@ -218,13 +218,11 @@ const Experience = () => {
               width: 60 + (i % 3) * 25,
               height: 60 + (i % 3) * 25,
               borderRadius: i % 3 === 0 ? '50%' : '35%',
-              background: i % 2 === 0 
-                ? 'linear-gradient(135deg, rgba(151, 169, 147, 0.2), rgba(167, 182, 163, 0.12))'
-                : 'rgba(167, 182, 163, 0.25)',
+              background: 'rgba(255, 255, 255, 0.5)',
               left: `${8 + i * 12}%`,
               top: `${15 + (i % 4) * 20}%`,
               filter: 'blur(2px)',
-              boxShadow: '0 4px 20px rgba(151,169,147,0.08)'
+              boxShadow: '0 4px 20px rgba(255,255,255,0.2)'
             }}
           />
         ))}
@@ -238,7 +236,7 @@ const Experience = () => {
               width: 8 + (i % 3) * 4,
               height: 8 + (i % 3) * 4,
               borderRadius: '50%',
-              background: 'rgba(151, 169, 147, 0.3)',
+              background: 'rgba(110, 181, 232, 0.3)',
               left: `${5 + i * 6}%`,
               top: `${10 + (i % 5) * 18}%`,
               filter: 'blur(1px)'
@@ -252,7 +250,7 @@ const Experience = () => {
           width: 350,
           height: 350,
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(151, 169, 147, 0.12), transparent 65%)',
+          background: 'radial-gradient(circle, rgba(110, 181, 232, 0.12), transparent 65%)',
           top: '-10%',
           right: '-5%',
           filter: 'blur(40px)'
@@ -262,7 +260,7 @@ const Experience = () => {
           width: 280,
           height: 280,
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(167, 182, 163, 0.15), transparent 65%)',
+          background: 'radial-gradient(circle, rgba(141, 201, 240, 0.15), transparent 65%)',
           bottom: '-8%',
           left: '-3%',
           filter: 'blur(35px)'
@@ -294,7 +292,7 @@ const Experience = () => {
             style={{
               width: 80,
               height: 4,
-              background: 'linear-gradient(90deg, #5d8c5a 0%, #78a375 100%)',
+              background: 'linear-gradient(90deg, #6eb5e8 0%, #8dc9f0 100%)',
               margin: '0 auto',
               borderRadius: 4
             }}
@@ -311,7 +309,7 @@ const Experience = () => {
               background: '#fff',
               borderRadius: 24,
               overflow: 'hidden',
-              boxShadow: '0 10px 40px rgba(151,169,147,0.12)',
+              boxShadow: '0 10px 40px rgba(110,181,232,0.12)',
               marginBottom: 30,
                 width: '100%',
                 display: 'flex',
@@ -333,7 +331,7 @@ const Experience = () => {
                 rotationX: rotateX,
                 rotationY: rotateY,
                 y: -8,
-                boxShadow: '0 20px 60px rgba(151,169,147,0.25)',
+                boxShadow: '0 20px 60px rgba(110,181,232,0.25)',
                 duration: 0.3,
                 ease: 'power2.out'
               });
@@ -343,7 +341,7 @@ const Experience = () => {
                 rotationX: 0,
                 rotationY: 0,
                 y: 0,
-                boxShadow: '0 10px 40px rgba(151,169,147,0.12)',
+                boxShadow: '0 10px 40px rgba(110,181,232,0.12)',
                 duration: 0.5,
                 ease: 'power2.out'
               });
@@ -437,7 +435,7 @@ const Experience = () => {
                     background: '#fff',
                     padding: '8px 14px',
                     borderRadius: 20,
-                    color: '#5d8c5a',
+                    color: '#6eb5e8',
                     fontWeight: 700,
                     fontSize: 13
                   }}>
@@ -464,13 +462,13 @@ const Experience = () => {
                     className="btn fw-bold"
                     style={{
                       flex: 1,
-                      background: 'linear-gradient(135deg, #5d8c5a 0%, #78a375 100%)',
+                      background: 'linear-gradient(135deg, #6eb5e8 0%, #8dc9f0 100%)',
                       color: '#fff',
                       border: 'none',
                       borderRadius: 12,
                       padding: '12px 16px',
                       fontSize: 14,
-                      boxShadow: '0 6px 20px rgba(151,169,147,0.25)',
+                      boxShadow: '0 6px 20px rgba(110,181,232,0.25)',
                       transition: 'all 0.3s ease',
                       fontWeight: 700,
                       textDecoration: 'none',
@@ -481,11 +479,11 @@ const Experience = () => {
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.transform = 'translateY(-2px)';
-                      e.currentTarget.style.boxShadow = '0 8px 25px rgba(151,169,147,0.35)';
+                      e.currentTarget.style.boxShadow = '0 8px 25px rgba(110,181,232,0.35)';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.transform = 'translateY(0)';
-                      e.currentTarget.style.boxShadow = '0 6px 20px rgba(151,169,147,0.25)';
+                      e.currentTarget.style.boxShadow = '0 6px 20px rgba(110,181,232,0.25)';
                     }}
                   >
                     <FaExternalLinkAlt size={13} />
@@ -497,26 +495,26 @@ const Experience = () => {
                     style={{
                       flex: 1,
                       background: '#fff',
-                      color: '#5d8c5a',
-                      border: '2px solid #5d8c5a',
+                      color: '#6eb5e8',
+                      border: '2px solid #6eb5e8',
                       borderRadius: 12,
                       padding: '12px 16px',
                       fontSize: 14,
-                      boxShadow: '0 4px 15px rgba(151,169,147,0.15)',
+                      boxShadow: '0 4px 15px rgba(110,181,232,0.15)',
                       transition: 'all 0.3s ease',
                       fontWeight: 700
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.background = 'linear-gradient(135deg, #5d8c5a, #78a375)';
+                      e.currentTarget.style.background = 'linear-gradient(135deg, #6eb5e8, #8dc9f0)';
                       e.currentTarget.style.color = '#fff';
                       e.currentTarget.style.transform = 'translateY(-2px)';
-                      e.currentTarget.style.boxShadow = '0 6px 20px rgba(151,169,147,0.3)';
+                      e.currentTarget.style.boxShadow = '0 6px 20px rgba(110,181,232,0.3)';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.background = '#fff';
-                      e.currentTarget.style.color = '#5d8c5a';
+                      e.currentTarget.style.color = '#6eb5e8';
                       e.currentTarget.style.transform = 'translateY(0)';
-                      e.currentTarget.style.boxShadow = '0 4px 15px rgba(151,169,147,0.15)';
+                      e.currentTarget.style.boxShadow = '0 4px 15px rgba(110,181,232,0.15)';
                     }}
                     onClick={() => setShowModal(true)}
                   >
@@ -534,8 +532,8 @@ const Experience = () => {
                       style={{
                         flex: 1,
                         background: '#fff',
-                        color: '#5d8c5a',
-                        border: '2px solid #5d8c5a',
+                        color: '#6eb5e8',
+                        border: '2px solid #6eb5e8',
                         borderRadius: 12,
                         padding: '10px 16px',
                         fontSize: 14,
@@ -544,19 +542,19 @@ const Experience = () => {
                         justifyContent: 'center',
                         gap: 8,
                         transition: 'all 0.3s ease',
-                        boxShadow: '0 4px 15px rgba(151,169,147,0.15)'
+                        boxShadow: '0 4px 15px rgba(110,181,232,0.15)'
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.background = 'linear-gradient(135deg, #5d8c5a, #78a375)';
+                        e.currentTarget.style.background = 'linear-gradient(135deg, #6eb5e8, #8dc9f0)';
                         e.currentTarget.style.color = '#fff';
                         e.currentTarget.style.transform = 'translateY(-2px)';
-                        e.currentTarget.style.boxShadow = '0 6px 20px rgba(151,169,147,0.3)';
+                        e.currentTarget.style.boxShadow = '0 6px 20px rgba(110,181,232,0.3)';
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.style.background = '#fff';
-                        e.currentTarget.style.color = '#5d8c5a';
+                        e.currentTarget.style.color = '#6eb5e8';
                         e.currentTarget.style.transform = 'translateY(0)';
-                        e.currentTarget.style.boxShadow = '0 4px 15px rgba(151,169,147,0.15)';
+                        e.currentTarget.style.boxShadow = '0 4px 15px rgba(110,181,232,0.15)';
                       }}
                     >
                       <FaFileAlt size={14} />
@@ -573,8 +571,8 @@ const Experience = () => {
                       style={{
                         flex: 1,
                         background: '#fff',
-                        color: '#5d8c5a',
-                        border: '2px solid #5d8c5a',
+                        color: '#6eb5e8',
+                        border: '2px solid #6eb5e8',
                         borderRadius: 12,
                         padding: '10px 16px',
                         fontSize: 14,
@@ -583,19 +581,19 @@ const Experience = () => {
                         justifyContent: 'center',
                         gap: 8,
                         transition: 'all 0.3s ease',
-                        boxShadow: '0 4px 15px rgba(151,169,147,0.15)'
+                        boxShadow: '0 4px 15px rgba(110,181,232,0.15)'
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.background = 'linear-gradient(135deg, #5d8c5a, #78a375)';
+                        e.currentTarget.style.background = 'linear-gradient(135deg, #6eb5e8, #8dc9f0)';
                         e.currentTarget.style.color = '#fff';
                         e.currentTarget.style.transform = 'translateY(-2px)';
-                        e.currentTarget.style.boxShadow = '0 6px 20px rgba(151,169,147,0.3)';
+                        e.currentTarget.style.boxShadow = '0 6px 20px rgba(110,181,232,0.3)';
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.style.background = '#fff';
-                        e.currentTarget.style.color = '#5d8c5a';
+                        e.currentTarget.style.color = '#6eb5e8';
                         e.currentTarget.style.transform = 'translateY(0)';
-                        e.currentTarget.style.boxShadow = '0 4px 15px rgba(151,169,147,0.15)';
+                        e.currentTarget.style.boxShadow = '0 4px 15px rgba(110,181,232,0.15)';
                       }}
                     >
                       <FaAward size={14} />
@@ -618,8 +616,9 @@ const Experience = () => {
                 background: '#fff',
                 borderRadius: 24,
                 overflow: 'hidden',
-                boxShadow: '0 10px 40px rgba(151,169,147,0.12)',
+                boxShadow: '0 10px 40px rgba(110,181,232,0.12)',
                 marginBottom: 30,
+                width: '100%',
                 width: '100%',
                 display: 'flex',
                 flexDirection: 'column',
@@ -640,7 +639,7 @@ const Experience = () => {
                   rotationX: rotateX,
                   rotationY: rotateY,
                   y: -8,
-                  boxShadow: '0 20px 60px rgba(151,169,147,0.25)',
+                  boxShadow: '0 20px 60px rgba(110,181,232,0.25)',
                   duration: 0.3,
                   ease: 'power2.out'
                 });
@@ -650,7 +649,7 @@ const Experience = () => {
                   rotationX: 0,
                   rotationY: 0,
                   y: 0,
-                  boxShadow: '0 10px 40px rgba(151,169,147,0.12)',
+                  boxShadow: '0 10px 40px rgba(110,181,232,0.12)',
                   duration: 0.5,
                   ease: 'power2.out'
                 });
@@ -659,7 +658,7 @@ const Experience = () => {
             {/* Header */}
             <div
               style={{
-                background: 'linear-gradient(135deg, #5d8c5a 0%, #78a375 100%)',
+                background: 'linear-gradient(135deg, #6eb5e8 0%, #8dc9f0 100%)',
                 padding: '24px 28px',
                 position: 'relative',
                 overflow: 'hidden'
@@ -753,7 +752,7 @@ const Experience = () => {
                     background: '#fff',
                     padding: '8px 14px',
                     borderRadius: 20,
-                    color: '#5d8c5a',
+                    color: '#6eb5e8',
                     fontWeight: 700,
                     fontSize: 13
                   }}>
@@ -780,11 +779,11 @@ const Experience = () => {
                   marginBottom: 12
                 }}>
                   <div style={{
-                    background: 'linear-gradient(135deg, #e8f0e6, #d4ddd2)',
+                    background: 'linear-gradient(135deg, #e0f2ff, #cde7ff)',
                     borderRadius: 12,
                     padding: '14px 16px',
                     textAlign: 'center',
-                    border: '2px solid rgba(151,169,147,0.15)',
+                    border: '2px solid rgba(110,181,232,0.15)',
                     transition: 'all 0.3s ease',
                     cursor: 'default'
                   }}
@@ -795,16 +794,16 @@ const Experience = () => {
                     gsap.to(e.currentTarget, { scale: 1, duration: 0.2 });
                   }}
                   >
-                    <div style={{ fontSize: 24, fontWeight: 800, color: '#5d8c5a', marginBottom: 4 }}>10+</div>
+                    <div style={{ fontSize: 24, fontWeight: 800, color: '#6eb5e8', marginBottom: 4 }}>10+</div>
                     <div style={{ fontSize: 12, color: '#666', fontWeight: 600 }}>Events</div>
                   </div>
 
                   <div style={{
-                    background: 'linear-gradient(135deg, #e8f0e6, #d4ddd2)',
+                    background: 'linear-gradient(135deg, #e0f2ff, #cde7ff)',
                     borderRadius: 12,
                     padding: '14px 16px',
                     textAlign: 'center',
-                    border: '2px solid rgba(151,169,147,0.15)',
+                    border: '2px solid rgba(110,181,232,0.15)',
                     transition: 'all 0.3s ease',
                     cursor: 'default'
                   }}
@@ -815,7 +814,7 @@ const Experience = () => {
                     gsap.to(e.currentTarget, { scale: 1, duration: 0.2 });
                   }}
                   >
-                    <div style={{ fontSize: 24, fontWeight: 800, color: '#5d8c5a', marginBottom: 4 }}>200+</div>
+                    <div style={{ fontSize: 24, fontWeight: 800, color: '#6eb5e8', marginBottom: 4 }}>200+</div>
                     <div style={{ fontSize: 12, color: '#666', fontWeight: 600 }}>Participants</div>
                   </div>
                 </div>
@@ -884,7 +883,7 @@ const Experience = () => {
                 className="btn btn-sm"
                 style={{ 
                   background: '#fff', 
-                  color: '#5d8c5a', 
+                  color: '#6eb5e8', 
                   fontWeight: 700, 
                   borderRadius: 20,
                   padding: '8px 16px',
@@ -920,7 +919,7 @@ const Experience = () => {
                 <div style={{ 
                   width: 4, 
                   height: 24, 
-                  background: 'linear-gradient(180deg, #5d8c5a, #78a375)',
+                  background: 'linear-gradient(180deg, #6eb5e8, #8dc9f0)',
                   borderRadius: 4
                 }} />
                 What I Did
@@ -931,15 +930,15 @@ const Experience = () => {
                     display: 'flex', 
                     gap: 12, 
                     padding: '14px 16px', 
-                    background: 'linear-gradient(135deg, #e8f0e6, #d4ddd2)', 
+                    background: 'linear-gradient(135deg, #e0f2ff, #cde7ff)', 
                     borderRadius: 10, 
-                    borderLeft: '4px solid #5d8c5a',
+                    borderLeft: '4px solid #6eb5e8',
                     transition: 'all 0.3s ease',
                     cursor: 'default'
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = 'translateX(4px)';
-                    e.currentTarget.style.boxShadow = '0 4px 12px rgba(151,169,147,0.15)';
+                    e.currentTarget.style.boxShadow = '0 4px 12px rgba(110,181,232,0.15)';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = 'translateX(0)';
@@ -947,7 +946,7 @@ const Experience = () => {
                   }}
                   >
                     <div style={{ 
-                      color: '#5d8c5a', 
+                      color: '#6eb5e8', 
                       marginTop: 2, 
                       fontSize: 18,
                       flexShrink: 0
@@ -969,7 +968,7 @@ const Experience = () => {
                 <div style={{ 
                   width: 4, 
                   height: 24, 
-                  background: 'linear-gradient(180deg, #5d8c5a, #78a375)',
+                  background: 'linear-gradient(180deg, #6eb5e8, #8dc9f0)',
                   borderRadius: 4
                 }} />
                 Technologies Used
@@ -985,13 +984,13 @@ const Experience = () => {
               }}>
                 {experience.technologies.map((t, i) => (
                   <span key={i} style={{ 
-                    background: 'linear-gradient(135deg, #5d8c5a, #78a375)', 
+                    background: 'linear-gradient(135deg, #6eb5e8, #8dc9f0)', 
                     color: '#fff', 
                     padding: '8px 14px', 
                     borderRadius: 14, 
                     fontWeight: 600, 
                     fontSize: 13,
-                    boxShadow: '0 2px 8px rgba(151,169,147,0.2)',
+                    boxShadow: '0 2px 8px rgba(110,181,232,0.2)',
                     transition: 'transform 0.2s ease'
                   }}
                   onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
@@ -1012,7 +1011,7 @@ const Experience = () => {
                 <div style={{ 
                   width: 4, 
                   height: 24, 
-                  background: 'linear-gradient(180deg, #5d8c5a, #78a375)',
+                  background: 'linear-gradient(180deg, #6eb5e8, #8dc9f0)',
                   borderRadius: 4
                 }} />
                 Key Achievements
@@ -1031,17 +1030,17 @@ const Experience = () => {
                     cursor: 'default'
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.background = 'linear-gradient(90deg, #f0f5ef 0%, #ffffff 100%)';
-                    e.currentTarget.style.borderColor = '#c8d9c4';
+                    e.currentTarget.style.background = 'linear-gradient(90deg, #e0f2ff 0%, #ffffff 100%)';
+                    e.currentTarget.style.borderColor = '#6eb5e8';
                     e.currentTarget.style.transform = 'translateX(4px)';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.background = 'linear-gradient(90deg, #f8f9fa 0%, #ffffff 100%)';
-                    e.currentTarget.style.borderColor = '#ffe9c9';
+                    e.currentTarget.style.borderColor = '#d4ebff';
                     e.currentTarget.style.transform = 'translateX(0)';
                   }}
                   >
-                    <FaCheckCircle size={16} style={{ color: '#5d8c5a', flexShrink: 0 }} />
+                    <FaCheckCircle size={16} style={{ color: '#6eb5e8', flexShrink: 0 }} />
                     <p style={{ margin: 0, color: '#444', fontSize: 14.5, lineHeight: 1.6 }}>{a}</p>
                   </div>
                 ))}
