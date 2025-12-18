@@ -49,7 +49,7 @@ export default function Portfolio() {
 		}}>
 			<Snowfall 
 				color="#ffffff"
-				snowflakeCount={150}
+				snowflakeCount={80}
 				radius={[5, 12]}
 				speed={[0.5, 2.0]}
 				wind={[-0.5, 1.0]}
