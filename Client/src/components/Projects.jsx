@@ -21,6 +21,7 @@ const projects = [
     description: 'Secure medical data exchange using steganography and encryption. Doctors embed encrypted patient data in images/audio files for safe hospital network sharing.',
     tech: ['React.js', 'Node.js', 'MongoDB', 'Python', 'Flask', 'Cryptography'],
     github: 'https://github.com/yash2607-del/MedSecure',
+    live: 'https://medsecure-nine.vercel.app/',
     gradient: 'linear-gradient(135deg, #6eb5e8 0%, #8dc9f0 100%)'
    
   },
@@ -40,8 +41,8 @@ const projects = [
     description: 'Civic issue reporting platform bridging citizens and solutions. Users report local problems with photos and locations, while moderators respond in real-time.',
     tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Bootstrap'],
     github: 'https://github.com/yash2607-del/Samaaj',
-    gradient: 'linear-gradient(135deg, #6eb5e8 0%, #8dc9f0 100%)',
-    status: 'in-progress'
+    live: 'https://mysamaaj.vercel.app/',
+    gradient: 'linear-gradient(135deg, #6eb5e8 0%, #8dc9f0 100%)'
     
   },
   {
@@ -318,14 +319,14 @@ const Projects = () => {
                       }}>
                         {project.icon}
                       </span>
-                      <div className="d-flex gap-2">
-                        <a 
+                      <div style={{ display: 'flex', gap: 8 }}>
+                        <a
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
                           style={{
-                            width: 32,
-                            height: 32,
+                            width: 36,
+                            height: 36,
                             borderRadius: '50%',
                             background: 'rgba(255,255,255,0.25)',
                             backdropFilter: 'blur(10px)',
@@ -339,7 +340,7 @@ const Projects = () => {
                           }}
                           onMouseEnter={(e) => {
                             e.currentTarget.style.background = 'rgba(255,255,255,0.4)';
-                            e.currentTarget.style.transform = 'scale(1.1)';
+                            e.currentTarget.style.transform = 'scale(1.05)';
                           }}
                           onMouseLeave={(e) => {
                             e.currentTarget.style.background = 'rgba(255,255,255,0.25)';
@@ -348,12 +349,15 @@ const Projects = () => {
                         >
                           <FaGithub size={16} />
                         </a>
+
                         {project.live && project.live !== '#' && (
-                          <a 
+                          <a
                             href={project.live}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             style={{
-                              width: 32,
-                              height: 32,
+                              width: 36,
+                              height: 36,
                               borderRadius: '50%',
                               background: 'rgba(255,255,255,0.25)',
                               backdropFilter: 'blur(10px)',
@@ -367,7 +371,7 @@ const Projects = () => {
                             }}
                             onMouseEnter={(e) => {
                               e.currentTarget.style.background = 'rgba(255,255,255,0.4)';
-                              e.currentTarget.style.transform = 'scale(1.1)';
+                              e.currentTarget.style.transform = 'scale(1.05)';
                             }}
                             onMouseLeave={(e) => {
                               e.currentTarget.style.background = 'rgba(255,255,255,0.25)';
