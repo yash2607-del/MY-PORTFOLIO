@@ -307,7 +307,7 @@ const Hero = () => {
             </div>
             <a
               ref={buttonRef}
-              href="https://drive.google.com/file/d/1Y4Ch5f4y52QQPsIg_-wJvMXC3IJZoWXi/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1okdL3rOzZVwQtnRZT7Pg7n9egVNAWkCN/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-lg fw-bold shadow"

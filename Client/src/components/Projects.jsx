@@ -7,63 +7,57 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
-    id: 4,
-    title: 'CyberGuard',
-    description: 'Cybersecurity monitoring platform for campus networks. Features tamper-proof logging, real-time threat detection, AI-powered attack classification, and honeypot deception.',
-    tech: ['React.js', 'Node.js', 'Flask', 'MongoDB', 'Socket.IO', 'Machine Learning'],
-    github: 'https://github.com/Dishi-Gautam/CyberGuard',
+    id: 1,
+    title: 'Samaaj',
+    description: 'Civic issue reporting platform bridging citizens and solutions. Users report local problems with photos and locations, while moderators respond in real-time.',
+    tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Bootstrap'],
+    github: 'https://github.com/yash2607-del/Samaaj',
+    live: 'https://samaaj-xi.vercel.app/',
     gradient: 'linear-gradient(135deg, #6eb5e8 0%, #8dc9f0 100%)'
-  
   },
   {
-    id: 1,
+    id: 2,
     title: 'MedSecure',
     description: 'Secure medical data exchange using steganography and encryption. Doctors embed encrypted patient data in images/audio files for safe hospital network sharing.',
     tech: ['React.js', 'Node.js', 'MongoDB', 'Python', 'Flask', 'Cryptography'],
     github: 'https://github.com/yash2607-del/MedSecure',
     live: 'https://medsecure-nine.vercel.app/',
     gradient: 'linear-gradient(135deg, #6eb5e8 0%, #8dc9f0 100%)'
-   
   },
   {
-    id: 2,
+    id: 3,
     title: 'MediChain',
     description: 'Blockchain-enabled healthcare ecosystem connecting patients, doctors, and pharmacies with verified prescriptions, AI chatbot, and real-time medicine discovery.',
     tech: ['React.js', 'Node.js', 'MongoDB', 'Blockchain', 'Ethereum', 'Gemini API'],
     github: 'https://github.com/yash2607-del/MediChain',
     live: 'https://medichain-chi.vercel.app/',
     gradient: 'linear-gradient(135deg, #6eb5e8 0%, #8dc9f0 100%)'
-    
   },
   {
-    id: 3,
-    title: 'Samaaj',
-    description: 'Civic issue reporting platform bridging citizens and solutions. Users report local problems with photos and locations, while moderators respond in real-time.',
-    tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Bootstrap'],
-    github: 'https://github.com/yash2607-del/Samaaj',
-    live: 'https://mysamaaj.vercel.app/',
-    gradient: 'linear-gradient(135deg, #6eb5e8 0%, #8dc9f0 100%)'
-    
-  },
-  {
-    id: 6,
+    id: 4,
     title: 'NextHire',
     description: 'AI-powered recruitment platform streamlining hiring process with automated resume screening, candidate matching, interview scheduling, and performance analytics.',
     tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'OpenAI', 'Tailwind CSS'],
     github: 'https://github.com/yash2607-del/nexthire',
-    gradient: 'linear-gradient(135deg, #6eb5e8 0%, #8dc9f0 100%)',
-    status: 'in-progress'
-  
+    live: 'https://nexthire-snowy.vercel.app/',
+    gradient: 'linear-gradient(135deg, #6eb5e8 0%, #8dc9f0 100%)'
   },
   {
     id: 5,
+    title: 'CyberGuard',
+    description: 'Cybersecurity monitoring platform for campus networks. Features tamper-proof logging, real-time threat detection, AI-powered attack classification, and honeypot deception.',
+    tech: ['React.js', 'Node.js', 'Flask', 'MongoDB', 'Socket.IO', 'Machine Learning'],
+    github: 'https://github.com/Dishi-Gautam/CyberGuard',
+    gradient: 'linear-gradient(135deg, #6eb5e8 0%, #8dc9f0 100%)'
+  },
+  {
+    id: 6,
     title: 'Ravi Portfolio',
     description: 'Modern, responsive portfolio I built for my father a General Manager highlighting his experience, achievements, and skills with smooth animations and a clean professional design.',
     tech: ['HTML5', 'CSS3', 'JavaScript'],
     github: 'https://github.com/yash2607-del/ravi-portfolio',
     live: 'https://ravi-myportfolio.vercel.app/',
     gradient: 'linear-gradient(135deg, #6eb5e8 0%, #8dc9f0 100%)'
-  
   }
 ];
 
