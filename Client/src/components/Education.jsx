@@ -269,7 +269,7 @@ const Education = () => {
                 <h4 style={{ color: '#6eb5e8', fontWeight: 700, fontSize: 20, marginBottom: 8 }}>B.Tech in Computer Science</h4>
                 <p style={{ color: '#333', fontWeight: 600, fontSize: 16, marginBottom: 6 }}>Jaypee Institute of Information Technology</p>
                 <p style={{ color: '#666', fontSize: 14, marginBottom: 4 }}>Sector 62, Noida</p>
-                <p style={{ color: '#444', fontSize: 15, fontWeight: 500 }}>CGPA: 8.0</p>
+                <p style={{ color: '#444', fontSize: 15, fontWeight: 500 }}>CGPA: 7.5</p>
               </div>
             </div>
             <div style={{
